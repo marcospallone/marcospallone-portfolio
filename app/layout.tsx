@@ -29,11 +29,11 @@ export default function RootLayout({
       <body className="antialiased">
         <Background />
 
-        <header className="relative z-20">
+        <header className="fixed z-20 w-full">
           <Header />
         </header>
 
-        <main className="relative z-10">{children}</main>
+        {children}
       </body>
     </html>
   );

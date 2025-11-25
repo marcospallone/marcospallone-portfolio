@@ -5,7 +5,7 @@ import HeaderMenu from "../../molecules/HeaderMenu/HeaderMenu";
 
 const Header: React.FC = () => {
   return (
-    <Box className="p-4 flex justify-between items-center">
+    <Box className="p-4 flex justify-between items-center w-full">
       <Logo />
       <HeaderMenu />
     </Box>
