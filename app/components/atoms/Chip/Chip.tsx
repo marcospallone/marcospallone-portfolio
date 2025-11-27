@@ -23,7 +23,7 @@ const Chip: React.FC<ChipProps> = ({
       sx={{ borderRadius: radius ? `${radius}px` : "" }}
       className={`border ${colorClass} ${backgroundColor} px-3 py-2 flex w-fit backdrop-blur-sm`}
     >
-      <span className={`font-code`}>{label}</span>
+      <span className="font-mono">{label}</span>
     </Box>
   );
 };

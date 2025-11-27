@@ -1,4 +1,4 @@
-export const TerminalCommands = [
+export const terminalCommands = [
   { text: "$ whoami", delay: 800, isCommand: true },
   { text: "marco-dev — Full-Stack Developer", delay: 500,  },
   { text: "$ npm install marco-portfolio", delay: 500, isCommand: true },

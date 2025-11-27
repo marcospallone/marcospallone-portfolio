@@ -1,6 +1,6 @@
 "use client";
 
-import { TerminalCommands } from "@/app/data/terminal";
+import { terminalCommands } from "@/app/data/terminal";
 import { Box } from "@mui/material";
 import { motion } from "motion/react";
 import { useEffect, useState } from "react";
@@ -22,11 +22,11 @@ const Terminal: React.FC<TerminalProps> = ({ onFinish }) => {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-    if (index >= TerminalCommands.length) {
+    if (index >= terminalCommands.length) {
       setTimeout(() => onFinish(), 500);
       return;
     }
-    const line = TerminalCommands[index];
+    const line = terminalCommands[index];
     const timer = setTimeout(() => {
       if (!line.isCommand) {
         setLines((prev) => [...prev, line]);

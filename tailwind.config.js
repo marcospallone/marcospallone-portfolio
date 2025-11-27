@@ -5,20 +5,26 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
     "./styles/**/*.{css,scss}",
   ],
+  safelist: [
+    "text-cyan-400",
+    "text-purple-400",
+    "text-green-400",
+    "text-orange-400",
+  ],
   theme: {
     extend: {
       fontFamily: {
         sans: ["var(--font-sans)"],
         mono: ["var(--font-mono)"],
       },
-      colors: {
-        cyan: {
-          400: "#22d3ee",
-        },
-        purple: {
-          500: '#a855f7',
-        }
-      }
+      // colors: {
+      //   cyan: {
+      //     400: "#22d3ee",
+      //   },
+      //   purple: {
+      //     500: '#a855f7',
+      //   }
+      // }
     },
   },
   plugins: [],
