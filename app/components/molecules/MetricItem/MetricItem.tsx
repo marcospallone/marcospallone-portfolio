@@ -24,7 +24,7 @@ const MetricItem: React.FC<MetricItemProps> = ({ metric, index }) => {
       <Box className="flex items-center justify-between">
         <Box className="flex items-center gap-2">
           <Icon className={`w-5 h-5 text-${metric.color}-400`} />
-          <span className="text-gray-300 font-mono text-sm">{metric.name}</span>
+          <span className="text-zinc-300 font-mono text-sm">{metric.name}</span>
         </Box>
         <Box className="flex items-center gap-2">
           <span className={`text-2xl font-bold text-${metric.color}-400`}>

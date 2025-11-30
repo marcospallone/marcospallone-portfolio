@@ -32,7 +32,7 @@ const Background: React.FC = () => {
         }}
       />
       <motion.div
-        className="absolute top-1/2 right-1/3 w-96 h-96 bg-magenta-500/20 rounded-full blur-3xl"
+        className="absolute top-1/2 right-1/3 w-96 h-96 bg-rose-500/20 rounded-full blur-3xl"
         animate={{
           x: [0, 50, 0],
           y: [0, -100, 0],

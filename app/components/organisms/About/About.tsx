@@ -1,12 +1,13 @@
 'use client';
 
-import { MetricProps, metrics } from '@/app/data/about';
+import { MetricProps, metrics, StatProps, stats } from '@/app/data/about';
 import { Box, Container, Grid } from '@mui/material';
 import { TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
 import Row from '../../atoms/Row/Row';
 import CodeSnippet from '../../molecules/CodeSnippet/CodeSnippet';
 import MetricItem from '../../molecules/MetricItem/MetricItem';
+import StatItem from '../../molecules/StatItem/StatItem';
 
 const About: React.FC = () => {
   return (
@@ -53,7 +54,7 @@ const About: React.FC = () => {
           <Grid size={12}>
             <Box>
               <Box className="relative">
-                <Box className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-magenta-500/20 rounded-2xl blur-2xl" />
+                <Box className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 via-purple-500/20 to-rose-500/20 rounded-2xl blur-2xl" />
                 <Box className="relative bg-black/60 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8">
                   <Box className="flex items-center gap-3 mb-8">
                     <TrendingUp className="w-6 h-6 text-cyan-400" />
@@ -79,6 +80,20 @@ const About: React.FC = () => {
                   </Row>
                 </Box>
               </Box>
+            </Box>
+          </Grid>
+        </Row>
+        <Row className="mt-8">
+          {stats.map((stat: StatProps, index: number) => (
+            <Grid key={index} size={{ xs: 12, lg: 3 }}>
+              <StatItem stat={stat} index={index} />
+            </Grid>
+          ))}
+        </Row>
+        <Row className="mt-8">
+          <Grid size={12}>
+            <Box className="flex justify-center">
+              <span className="font-mono text-cyan-400">{'</about>'}</span>
             </Box>
           </Grid>
         </Row>

@@ -5,6 +5,7 @@ import Hero from "./components/organisms/Hero/Hero";
 import Terminal from "./components/organisms/Terminal/Terminal";
 import { AnimatePresence, motion } from "motion/react";
 import About from "./components/organisms/About/About";
+import Experience from "./components/organisms/Experience/Experience";
 
 export default function Home() {
   const [showTerminal, setShowTerminal] = useState(false);
@@ -40,6 +41,7 @@ export default function Home() {
         )}
       </AnimatePresence>
       <About />
+      <Experience />
     </main>
   );
 }
