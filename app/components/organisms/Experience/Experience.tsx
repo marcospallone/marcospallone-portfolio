@@ -1,10 +1,8 @@
 'use client';
 
-import { StatProps } from '@/app/data/about';
 import { ExperienceProps, experiences } from '@/app/data/experience';
 import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
-import StatItem from '../../molecules/StatItem/StatItem';
 import ExperienceItem from '../../molecules/ExperienceItem/ExperienceItem';
 
 const Experience: React.FC = () => {
