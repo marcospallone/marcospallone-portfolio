@@ -5,7 +5,7 @@ import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
 import ExperienceItem from '../../molecules/ExperienceItem/ExperienceItem';
 
-const Experience: React.FC = () => {
+const Experiences: React.FC = () => {
   return (
     <section>
       <Container className="py-20">
@@ -41,4 +41,4 @@ const Experience: React.FC = () => {
   );
 };
 
-export default Experience;
+export default Experiences;

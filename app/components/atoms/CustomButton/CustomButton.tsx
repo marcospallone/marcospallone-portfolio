@@ -10,6 +10,7 @@ interface ButtonProps {
   customClass?: string;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
+  onClick?: any
 }
 
 const CustomButton: React.FC<ButtonProps> = ({
@@ -20,7 +21,8 @@ const CustomButton: React.FC<ButtonProps> = ({
   size,
   customClass,
   startIcon,
-  endIcon
+  endIcon,
+  onClick
 }) => {
   return (
     <Button
@@ -29,6 +31,7 @@ const CustomButton: React.FC<ButtonProps> = ({
       size={size ?? "medium"}
       startIcon={startIcon}
       endIcon={endIcon}
+      onClick={onClick}
     >
       {label}
     </Button>

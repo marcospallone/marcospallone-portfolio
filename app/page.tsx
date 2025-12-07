@@ -5,8 +5,10 @@ import Hero from "./components/organisms/Hero/Hero";
 import Terminal from "./components/organisms/Terminal/Terminal";
 import { AnimatePresence, motion } from "motion/react";
 import About from "./components/organisms/About/About";
-import Experience from "./components/organisms/Experience/Experience";
+import Experiences from "./components/organisms/Experiences/Experiences";
 import Skills from "./components/organisms/Skills/Skills";
+import Languages from "./components/organisms/Languages/Languages";
+import Projects from "./components/organisms/Projects/Projects";
 
 export default function Home() {
   const [showTerminal, setShowTerminal] = useState(false);
@@ -42,8 +44,10 @@ export default function Home() {
         )}
       </AnimatePresence>
       <About />
-      <Experience />
+      <Experiences />
       <Skills />
+      <Languages />
+      <Projects />
     </main>
   );
 }
