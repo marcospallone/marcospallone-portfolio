@@ -9,6 +9,7 @@ import Experiences from "./components/organisms/Experiences/Experiences";
 import Skills from "./components/organisms/Skills/Skills";
 import Languages from "./components/organisms/Languages/Languages";
 import Projects from "./components/organisms/Projects/Projects";
+import Contacts from "./components/organisms/Contacts/Contacts";
 
 export default function Home() {
   const [showTerminal, setShowTerminal] = useState(false);
@@ -48,6 +49,7 @@ export default function Home() {
       <Skills />
       <Languages />
       <Projects />
+      <Contacts />
     </main>
   );
 }
