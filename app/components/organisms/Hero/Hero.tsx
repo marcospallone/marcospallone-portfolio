@@ -40,7 +40,7 @@ const Hero: React.FC = () => {
             <Box className="flex mt-6">
               <CustomButton
                 radius={6}
-                label="Explore My Work"
+                children="Explore My Work"
                 background="bg-gradient-to-r from-cyan-500 to-purple-600"
                 customClass="!text-white hover:from-cyan-600 hover:to-purple-700 border-0 group"
                 endIcon={
@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
               />
               <CustomButton
                 radius={6}
-                label="Explore My Work"
+                children="Explore My Work"
                 background="bg-white"
                 customClass="!text-cyan-400 hover:bg-cyan-600 hover:text-white ml-4"
                 startIcon={<Mail className="w-4 h-4 mr-2" />}

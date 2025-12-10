@@ -11,7 +11,7 @@ import StatItem from '../../molecules/StatItem/StatItem';
 
 const About: React.FC = () => {
   return (
-    <section>
+    <section id='about'>
       <Container className="py-20">
         <Row>
           <Grid size={12}>

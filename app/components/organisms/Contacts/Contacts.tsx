@@ -10,7 +10,7 @@ import ContactForm from '../../molecules/ContactForm/ContactForm';
 
 const Contacts: React.FC = () => {
   return (
-    <section>
+    <section id='contacts'>
       <Container className="py-20">
         <Row>
           <Grid size={12}>
@@ -25,12 +25,12 @@ const Contacts: React.FC = () => {
           </Grid>
         </Row>
         <Row className="mt-8">
-          <Grid size={{ xs: 12, md: 6 }}>
+          <Grid size={{ xs: 12, md: 6 }} className="flex items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="space-y-8"
+              className="space-y-8 w-full"
             >
               <div>
                 <h3 className="text-cyan-400 mb-6">Contact Information</h3>

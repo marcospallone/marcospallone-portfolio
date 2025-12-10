@@ -7,7 +7,7 @@ import ExperienceItem from '../../molecules/ExperienceItem/ExperienceItem';
 
 const Experiences: React.FC = () => {
   return (
-    <section>
+    <section id='experiences'>
       <Container className="py-20">
         <Row>
           <Grid size={12}>

@@ -36,18 +36,18 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index }) => {
                   <span className="text-cyan-400 font-mono text-sm">{project.repo}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CustomButton
-                    size="small"
-                    customClass="flex min-w-auto !px-0 !py-0 text-xs text-zinc-400 hover:text-cyan-400"
+                  <a
+                    className="flex min-w-auto !px-0 !py-0 text-xs text-zinc-400 hover:text-cyan-400 cursor-pointer"
                     onClick={() => window.open(project.github, '_blank')}
-                    startIcon={<Github className="w-5 h-5 mr-0" />}
-                  />
-                  <CustomButton
-                    size="small"
-                    customClass="flex min-w-auto !px-0 !py-0 text-xs text-zinc-400 hover:text-cyan-400"
+                  >
+                    <Github className="w-5 h-5 mr-0" />
+                  </a>
+                  <a
+                    className="flex min-w-auto !px-0 !py-0 text-xs text-zinc-400 hover:text-cyan-400 cursor-pointer"
                     onClick={() => window.open(project.url, '_blank')}
-                    startIcon={<ExternalLink className="w-5 h-5 mr-0" />}
-                  />
+                  >
+                    <ExternalLink className="w-5 h-5 mr-0" />
+                  </a>
                 </div>
               </div>
               <div className="flex items-center gap-2">

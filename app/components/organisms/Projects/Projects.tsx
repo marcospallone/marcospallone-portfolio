@@ -7,7 +7,7 @@ import ProjectItem from '../../molecules/ProjectItem/ProjectItem';
 
 const Projects: React.FC = () => {
   return (
-    <section>
+    <section id='projects'>
       <Container className="py-20">
         <Row>
           <Grid size={12}>

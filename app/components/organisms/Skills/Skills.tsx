@@ -10,7 +10,7 @@ const Skills: React.FC = () => {
   const [whichFlipped, setWhichFlipped] = useState<number | null>(0);
 
   return (
-    <section>
+    <section id='skills'>
       <Container className="py-20">
         <Row>
           <Grid size={12}>
