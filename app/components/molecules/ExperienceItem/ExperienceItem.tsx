@@ -24,7 +24,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) =>
           <Box className="flex-1">
             <motion.div
               whileHover={{ scale: 1.02 }}
-              className="relative group ml-16 md:ml-0"
+              className="relative group"
             >
               <Box
                 className={`absolute inset-0 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity ${
@@ -94,7 +94,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) =>
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
           transition={{ duration: 0.3, delay: index * 0.2 + 0.3 }}
-          className={`absolute left-8 md:left-1/2 top-3 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[#0a0a0f] ${
+          className={`absolute left-1/2 top-3 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[#0a0a0f] ${
             experience.type === 'work'
               ? 'bg-gradient-to-r from-cyan-500 to-blue-500'
               : 'bg-gradient-to-r from-purple-500 to-rose-500'

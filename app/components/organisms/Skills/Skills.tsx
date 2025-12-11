@@ -7,11 +7,11 @@ import Row from '../../atoms/Row/Row';
 import SkillsItem from '../../molecules/SkillsItem/SkillsItem';
 
 const Skills: React.FC = () => {
-  const [whichFlipped, setWhichFlipped] = useState<number | null>(0);
+  const [whichFlipped, setWhichFlipped] = useState<number | null>(null);
 
   return (
     <section id='skills'>
-      <Container className="py-20">
+      <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">

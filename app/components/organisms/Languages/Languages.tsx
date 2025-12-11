@@ -8,7 +8,7 @@ import LanguageItem from '../../molecules/LanguageItem/LanguageItem';
 const Languages: React.FC = () => {
   return (
     <section id='languages'>
-      <Container className="py-20">
+      <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">

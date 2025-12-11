@@ -12,7 +12,7 @@ import StatItem from '../../molecules/StatItem/StatItem';
 const About: React.FC = () => {
   return (
     <section id='about'>
-      <Container className="py-20">
+      <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">

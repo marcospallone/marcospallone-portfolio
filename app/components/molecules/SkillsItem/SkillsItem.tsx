@@ -129,7 +129,7 @@ const SkillsItem: React.FC<SkillItemProps> = ({
                 <h4 style={{ color: category.color }}>{category.name}</h4>
               </div>
 
-              <div className="grid grid-cols-6 gap-2">
+              <div className="grid grid-cols-2 md:grid-cols-6 gap-y-4 md:gap-y-0 gap-0 md:gap-2">
                 {category.skills.map((skill: any, skillIndex: number) => (
                   <motion.div
                     key={skill.name}

@@ -10,6 +10,7 @@ import Skills from "./components/organisms/Skills/Skills";
 import Languages from "./components/organisms/Languages/Languages";
 import Projects from "./components/organisms/Projects/Projects";
 import Contacts from "./components/organisms/Contacts/Contacts";
+import Footer from "./components/molecules/Footer/Footer";
 
 export default function Home() {
   const [showTerminal, setShowTerminal] = useState(false);
@@ -50,6 +51,7 @@ export default function Home() {
       <Languages />
       <Projects />
       <Contacts />
+      <Footer />
     </main>
   );
 }

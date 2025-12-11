@@ -11,7 +11,7 @@ import ContactForm from '../../molecules/ContactForm/ContactForm';
 const Contacts: React.FC = () => {
   return (
     <section id='contacts'>
-      <Container className="py-20">
+      <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">

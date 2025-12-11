@@ -8,7 +8,7 @@ import ExperienceItem from '../../molecules/ExperienceItem/ExperienceItem';
 const Experiences: React.FC = () => {
   return (
     <section id='experiences'>
-      <Container className="py-20">
+      <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">
@@ -22,7 +22,7 @@ const Experiences: React.FC = () => {
           </Grid>
         </Row>
         <Row className="relative mt-8">
-          <Box className="absolute left-8 md:left-1/2 top-0 bottom-12 w-0.5 bg-gradient-to-b from-cyan-500 via-purple-500 to-rose-500" />
+          <Box className="absolute left-1/2 top-0 bottom-12 w-0.5 bg-gradient-to-b from-cyan-500 via-purple-500 to-rose-500" />
           {experiences.map((experience: ExperienceProps, index: number) => (
             <Grid key={index} size={12}>
               <ExperienceItem experience={experience} index={index} />
