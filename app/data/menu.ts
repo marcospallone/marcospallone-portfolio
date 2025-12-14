@@ -1,11 +1,11 @@
 export const menuData = {
   items: [
-    { label: 'about', link: '/' },
-    { label: 'experiences', link: '/' },
-    { label: 'skills', link: '/' },
-    { label: 'languages', link: '/' },
-    { label: 'projects', link: '/' },
-    { label: 'contacts', link: '/' },
+    { label: 'about', href: '#about' },
+    { label: 'experiences', href: '#experiences' },
+    { label: 'skills', href: '#skills' },
+    { label: 'languages', href: '#languages' },
+    { label: 'projects', href: '#projects' },
+    { label: 'contacts', href: '#contacts' },
   ],
 };
 

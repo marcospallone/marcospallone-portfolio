@@ -18,13 +18,13 @@ const Hero: React.FC = () => {
               backgroundColor="bg-gradient-to-r from-cyan-500/10 to-purple-500/10"
               label='$ echo "Hello, World!"'
             />
-            <Box className="mt-8 mb-4 font-medium text-2xl md:text-3xl lg:text-4xl text-zinc-400">
+            <Box className="mt-8 mb-4 font-medium text-2xl md:text-3xl lg:text-4xl text-zinc-300">
               I'm a
             </Box>
-            <h1 className="mt-4 mb-4 font-bold text-3xl md:text-4xl lg:text-5xl text-white">
+            <h1 className="mt-4 mb-4 font-bold font-mono text-3xl md:text-4xl lg:text-5xl text-white">
               Full Stack Engineer
             </h1>
-            <p className="mt-4 mb-4 font-medium text-xl md:text-2xl lg:text-3xl text-zinc-400">
+            <p className="mt-4 mb-4 font-medium text-xl md:text-2xl lg:text-3xl text-zinc-300">
               I craft{" "}
               <span className="text-cyan-400 text-bold">
                 scalable web applications
@@ -42,7 +42,7 @@ const Hero: React.FC = () => {
                 radius={6}
                 children="Explore My Work"
                 background="bg-gradient-to-r from-cyan-500 to-purple-600"
-                customClass="!text-white hover:from-cyan-600 hover:to-purple-700 border-0 group"
+                customClass="!text-white hover:from-cyan-600 hover:to-purple-700 border-0 group font-mono"
                 endIcon={
                   <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 }
@@ -51,7 +51,7 @@ const Hero: React.FC = () => {
                 radius={6}
                 children="Explore My Work"
                 background="bg-white"
-                customClass="!text-cyan-400 hover:bg-cyan-600 hover:text-white ml-4"
+                customClass="!text-cyan-400 hover:bg-cyan-600 hover:text-white ml-4 font-mono"
                 startIcon={<Mail className="w-4 h-4 mr-2" />}
               />
             </Box>

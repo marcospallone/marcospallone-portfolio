@@ -1,13 +1,14 @@
 'use client';
 
-import { languages } from '@/app/data/languages';
+import { languages, subtitleKeywords } from '@/app/data/languages';
 import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
 import LanguageItem from '../../molecules/LanguageItem/LanguageItem';
+import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const Languages: React.FC = () => {
   return (
-    <section id='languages'>
+    <section id="languages">
       <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
@@ -15,9 +16,7 @@ const Languages: React.FC = () => {
               <span className="font-mono text-cyan-400">{'<languages>'}</span>
             </Box>
             <Box className="mt-8">
-              <p className="text-xl text-center text-zinc-300 italic">
-                Languages I speak and understand
-              </p>
+              <SectionSubtitle keywords={subtitleKeywords} delay={3200} />
             </Box>
           </Grid>
         </Row>

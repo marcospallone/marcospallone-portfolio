@@ -1,9 +1,10 @@
 import { ExperienceProps } from '@/app/data/experience';
 import { getTechColor } from '@/app/utils/colors-map';
 import { Box } from '@mui/material';
-import { Briefcase, Calendar, GraduationCap } from 'lucide-react';
+import { Briefcase, Building2, Calendar, GraduationCap, Navigation2 } from 'lucide-react';
 import { motion } from 'motion/react';
 import Image from 'next/image';
+import ReactCountryFlag from 'react-country-flag';
 
 interface ExperienceItemProps {
   experience: ExperienceProps;
@@ -22,10 +23,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) =>
       >
         <Box className="flex items-center gap-4">
           <Box className="flex-1">
-            <motion.div
-              whileHover={{ scale: 1.02 }}
-              className="relative group"
-            >
+            <motion.div whileHover={{ scale: 1.02 }} className="relative group">
               <Box
                 className={`absolute inset-0 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity ${
                   experience.type === 'work'
@@ -42,7 +40,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) =>
               >
                 <Box className="flex items-start gap-4 mb-3">
                   <Box
-                    className={`rounded-lg ${
+                    className={`rounded-lg overflow-hidden ${
                       experience.type === 'work'
                         ? 'bg-cyan-500/20 text-cyan-400'
                         : 'bg-purple-500/20 text-purple-400'
@@ -66,10 +64,24 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) =>
                     >
                       {experience.title}
                     </h3>
-                    <p className="text-zinc-300 mb-2">{experience.entity}</p>
-                    <Box className="flex items-center gap-2 text-zinc-400 text-sm mb-3">
+                    <Box className="flex items-center gap-2 text-zinc-300 text-sm mb-1">
+                      <Building2 className="w-4 h-4" />
+                      <span>{experience.entity}</span>
+                    </Box>
+                    <Box className="flex items-center gap-2 text-zinc-400 text-sm mb-1">
                       <Calendar className="w-4 h-4" />
                       <span>{experience.period}</span>
+                    </Box>
+                    <Box className="flex items-center gap-2 text-zinc-400 text-sm mb-3">
+                      <Navigation2 className="w-4 h-4" />
+                      <span>{experience.location}</span>
+                      <div className="flex rounded-md overflow-hidden">
+                        <ReactCountryFlag
+                          countryCode={experience.countryCode}
+                          svg
+                          style={{ width: '16px', height: '16px' }}
+                        />
+                      </div>
                     </Box>
                   </Box>
                 </Box>

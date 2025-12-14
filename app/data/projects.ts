@@ -1,80 +1,105 @@
+import { SubtitleKeyword } from '../models/subtitle-interface';
+
 export interface ProjectProps {
-    repo: string;
-    role: string;
-    github?: string;
-    url?: string;
-    media: string;
-    title: string;
-    description: string;
-    technologies: string[];
-    command: string;
+  repo: string;
+  role: string;
+  github?: string;
+  url?: string;
+  media: string;
+  title: string;
+  description: string;
+  technologies: string[];
+  command: string;
 }
 
 export const projects: ProjectProps[] = [
-    {
-      title: 'E-Commerce Platform',
-      repo: 'ecommerce-platform',
-      role: 'Full-Stack',
-      description: 'A full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS'],
-      media: 'ecommerce website',
-      github: '#',
-      url: '#',
-      command: 'npm run url',
-    },
-    {
-      title: 'Task Management App',
-      repo: 'taskflow-manager',
-      role: 'Frontend Lead',
-      description: 'Collaborative project management tool with real-time updates, team chat, and advanced analytics.',
-      technologies: ['Vue.js', 'Express', 'MongoDB', 'Socket.io', 'Docker'],
-      media: 'project management dashboard',
-      github: '#',
-      url: '#',
-      command: 'yarn start',
-    },
-    {
-      title: 'AI Content Generator',
-      repo: 'ai-content-studio',
-      role: 'Lead Developer',
-      description: 'AI-powered content creation platform using advanced language models for marketing and creative writing.',
-      technologies: ['Next.js', 'Python', 'FastAPI', 'OpenAI', 'Redis'],
-      media: 'ai technology interface',
-      github: '#',
-      url: '#',
-      command: 'npm run dev',
-    },
-    {
-      title: 'Real-Time Analytics Dashboard',
-      repo: 'analytics-pro',
-      role: 'Full-Stack',
-      description: 'Interactive analytics dashboard with real-time data visualization and customizable reports.',
-      technologies: ['React', 'TypeScript', 'GraphQL', 'D3.js', 'Firebase'],
-      media: 'analytics dashboard',
-      github: '#',
-      url: '#',
-      command: 'pnpm dev',
-    },
-    {
-      title: 'Social Media Platform',
-      repo: 'social-connect',
-      role: 'Backend Architect',
-      description: 'Modern social networking application with posts, stories, messaging, and video calls.',
-      technologies: ['React Native', 'Node.js', 'PostgreSQL', 'WebRTC', 'AWS'],
-      media: 'social media app',
-      github: '#',
-      url: '#',
-      command: 'npm start',
-    },
-    {
-      title: 'DevOps Automation Tool',
-      repo: 'devops-automator',
-      role: 'DevOps Engineer',
-      description: 'CI/CD pipeline automation tool with container orchestration and deployment monitoring.',
-      technologies: ['Python', 'Docker', 'Kubernetes', 'Jenkins', 'Terraform'],
-      media: 'devops automation',
-      github: '#',
-      url: '#',
-      command: 'python run.py',
-    },
-]
+  {
+    title: 'Treccani',
+    repo: 'treccani-frontend',
+    role: 'Frontend Developer',
+    description:
+      'Frontend development for the official Treccani website, focusing on performance, accessibility and content-driven architecture using a modern headless CMS approach.',
+    technologies: ['TypeScript', 'Next.js', 'MUI', 'Storyblok', 'Figma', 'Git', 'Jira'],
+    media: '/images/treccani.png',
+    url: 'https://www.treccani.it',
+    command: 'npm run dev',
+  },
+  {
+    title: 'Juriam',
+    repo: 'juriam',
+    role: 'Full-Stack Developer',
+    description:
+      'Full-stack development of an AI-powered legal platform designed to support lawyers in daily activities, automating document creation, legal workflows and certified communications.',
+    technologies: ['Angular', 'NestJS', 'Bootstrap', 'Git', 'AWS', 'Asana'],
+    media: '/images/juriam.jpeg',
+    url: 'https://juriam.it/',
+    command: 'yarn start',
+  },
+  {
+    title: 'Università degli Studi di Padova',
+    repo: 'unipd-frontend',
+    role: 'Frontend Developer',
+    description:
+      'Frontend development for the University of Padua website, focused on scalable design systems, accessibility standards and seamless integration with an enterprise CMS.',
+    technologies: ['TypeScript', 'Next.js', 'MUI', 'Drupal', 'Figma', 'Git', 'Jira'],
+    media: '/images/unipd.jpg',
+    command: 'pnpm dev',
+  },
+  {
+    title: 'Termoricambi',
+    repo: 'termoricambi',
+    role: 'Full-Stack Engineer',
+    description:
+      'Full-stack engineering of two interconnected e-commerce platforms, built with different technologies and strategies to support distinct business models within the same domain.',
+    technologies: ['Liquid', 'Shopify', 'GraphQL', 'PrestaShop', 'PHP'],
+    media: '/images/termoricambi.png',
+    command: 'shopify app dev',
+  },
+  {
+    title: 'Texting and Driving',
+    repo: 'texting-and-driving',
+    role: 'Full-Stack Engineer',
+    description:
+      'Research-driven project exploring computer vision and mobile sensing to detect driving conditions and automatically restrict smartphone usage for improved road safety.',
+    technologies: ['Python', 'Keras', 'Tensorflow', 'Object Detection', 'AWS'],
+    media: '/images/unibo.png',
+    command: 'npm start',
+  },
+  {
+    title: 'Link Motors',
+    repo: 'link-motors',
+    role: 'Full-Stack Developer',
+    description:
+      'Full-stack development of an internal management platform for administrators and affiliates of a nationwide automotive reseller network.',
+    technologies: ['Angular', 'NestJS', 'Bootstrap', 'Git', 'AWS', 'Asana'],
+    media: '/images/linkmotors.png',
+    command: 'ng serve',
+  },
+];
+
+export const subtitleKeywords: SubtitleKeyword[] = [
+  {
+    prefix: 'Projects focused on',
+    colored: 'real-world impact,',
+    suffix: 'not just demos.',
+    color: 'text-cyan-400',
+  },
+  {
+    prefix: '',
+    colored: 'Selected words',
+    suffix: 'that showcase my expertise.',
+    color: 'text-purple-400',
+  },
+  {
+    prefix: 'Each project driven by',
+    colored: 'engineering decisions,',
+    suffix: 'not shortcuts.',
+    color: 'text-emerald-400',
+  },
+  {
+    prefix: 'Building solutions with',
+    colored: 'purpose,',
+    suffix: 'clarity and ownership.',
+    color: 'text-rose-400',
+  },
+];

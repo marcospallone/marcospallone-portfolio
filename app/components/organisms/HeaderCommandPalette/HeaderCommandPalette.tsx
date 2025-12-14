@@ -126,7 +126,7 @@ const HeaderCommandPalette: React.FC<HeaderCommandPaletteProps> = ({
                   onChange={(e) => setQuery(e.target.value)}
                   onFocus={() => setIsOpen(true)}
                   placeholder="Quick navigation..."
-                  className="bg-transparent text-gray-200 text-sm w-full focus:outline-none"
+                  className="bg-transparent text-zinc-200 text-sm w-full focus:outline-none"
                 />
               </div>
 
@@ -157,7 +157,7 @@ const HeaderCommandPalette: React.FC<HeaderCommandPaletteProps> = ({
                             }
                         `}
                       >
-                        <span className="text-gray-300 text-xs font-mono">{item}</span>
+                        <span className="text-zinc-300 text-xs font-mono">{item}</span>
                       </motion.button>
                     ))}
                   </motion.div>

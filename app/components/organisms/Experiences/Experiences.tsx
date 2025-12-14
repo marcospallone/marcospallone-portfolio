@@ -1,9 +1,10 @@
 'use client';
 
-import { ExperienceProps, experiences } from '@/app/data/experience';
+import { ExperienceProps, experiences, subtitleKeywords } from '@/app/data/experience';
 import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
 import ExperienceItem from '../../molecules/ExperienceItem/ExperienceItem';
+import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const Experiences: React.FC = () => {
   return (
@@ -15,9 +16,7 @@ const Experiences: React.FC = () => {
               <span className="font-mono text-cyan-400">{'<experience>'}</span>
             </Box>
             <Box className="mt-8">
-              <p className="text-xl text-center text-zinc-300 italic">
-                My career path and educational background
-              </p>
+              <SectionSubtitle keywords={subtitleKeywords} delay={3200} />
             </Box>
           </Grid>
         </Row>

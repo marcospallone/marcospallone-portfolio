@@ -1,9 +1,10 @@
 'use client';
 
-import { projects } from '@/app/data/projects';
+import { projects, subtitleKeywords } from '@/app/data/projects';
 import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
 import ProjectItem from '../../molecules/ProjectItem/ProjectItem';
+import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const Projects: React.FC = () => {
   return (
@@ -15,9 +16,7 @@ const Projects: React.FC = () => {
               <span className="font-mono text-cyan-400">{'<projects>'}</span>
             </Box>
             <Box className="mt-8">
-              <p className="text-xl text-center text-zinc-300 italic">
-                Selected works that showcase my expertise
-              </p>
+              <SectionSubtitle keywords={subtitleKeywords} delay={2800} />
             </Box>
           </Grid>
         </Row>

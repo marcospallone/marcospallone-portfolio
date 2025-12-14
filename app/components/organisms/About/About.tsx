@@ -1,6 +1,12 @@
 'use client';
 
-import { MetricProps, metrics, StatProps, stats } from '@/app/data/about';
+import {
+  MetricProps,
+  metrics,
+  StatProps,
+  stats,
+  subtitleKeywords,
+} from '@/app/data/about';
 import { Box, Container, Grid } from '@mui/material';
 import { TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
@@ -8,10 +14,11 @@ import Row from '../../atoms/Row/Row';
 import CodeSnippet from '../../molecules/CodeSnippet/CodeSnippet';
 import MetricItem from '../../molecules/MetricItem/MetricItem';
 import StatItem from '../../molecules/StatItem/StatItem';
+import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const About: React.FC = () => {
   return (
-    <section id='about'>
+    <section id="about">
       <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
@@ -19,9 +26,7 @@ const About: React.FC = () => {
               <span className="font-mono text-cyan-400">{'<about>'}</span>
             </Box>
             <Box className="mt-8">
-              <p className="text-xl text-center text-zinc-300 italic">
-                Passionate developer crafting digital experiences
-              </p>
+              <SectionSubtitle keywords={subtitleKeywords} delay={2800} />
             </Box>
           </Grid>
         </Row>
@@ -39,15 +44,38 @@ const About: React.FC = () => {
             </motion.div>
           </Grid>
           <Grid size={{ xs: 12, lg: 6 }} className="flex align-center">
-            <p className="text-zinc-300 text-lg">
-              I'm a passionate full-stack developer with a love for creating innovative
-              web applications that make a difference. With expertise in both frontend and
-              backend technologies, I bring ideas to life through clean, efficient code.{' '}
-              <br />
-              <br /> My journey in software development has equipped me with a diverse
-              skill set and the ability to tackle complex challenges. I'm constantly
-              learning and adapting to new technologies to deliver cutting-edge solutions.
-            </p>
+            <motion.div
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={{
+                visible: { transition: { staggerChildren: 0.15 } },
+              }}
+              className='flex flex-col justify-center'
+            >
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, y: 12 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                className="text-zinc-200 text-lg"
+              >
+                I’m a full-stack developer focused on building scalable, high-quality web
+                applications. I turn complex problems into clean, maintainable solutions
+                through thoughtful architecture and well-crafted code.
+              </motion.p>
+
+              <motion.p
+                variants={{
+                  hidden: { opacity: 0, y: 12 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                className="mt-4 text-zinc-200 text-lg"
+              >
+                Working across frontend and backend, I bridge design and engineering to
+                deliver reliable, performant products with long-term impact.
+              </motion.p>
+            </motion.div>
           </Grid>
         </Row>
         <Row className="mt-8">

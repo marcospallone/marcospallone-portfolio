@@ -2,7 +2,6 @@
 
 import { terminalCommands } from "@/app/data/terminal";
 import { Box } from "@mui/material";
-import { motion } from "motion/react";
 import { useEffect, useState } from "react";
 
 export interface TerminalProps {
@@ -63,23 +62,23 @@ const Terminal: React.FC<TerminalProps> = ({ onFinish }) => {
   }, [index, onFinish]);
 
   return (
-    <div className="relative group">
-      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
-      <div className="relative bg-black/90 backdrop-blur-xl border border-cyan-500/30 rounded-lg overflow-hidden shadow-2xl w-[700px]">
-        <div className="flex items-center gap-2 px-4 py-3 bg-black/60 border-b border-cyan-500/20">
-          <div className="flex gap-2">
-            <div className="w-3 h-3 rounded-full bg-red-500" />
-            <div className="w-3 h-3 rounded-full bg-yellow-500" />
-            <div className="w-3 h-3 rounded-full bg-green-500" />
-          </div>
+    <Box className="relative group">
+      <Box className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
+      <Box className="relative bg-black/90 backdrop-blur-xl border border-cyan-500/30 rounded-lg overflow-hidden shadow-2xl w-[700px]">
+        <Box className="flex items-center gap-2 px-4 py-3 bg-black/60 border-b border-cyan-500/20">
+          <Box className="flex gap-2">
+            <Box className="w-3 h-3 rounded-full bg-red-500" />
+            <Box className="w-3 h-3 rounded-full bg-yellow-500" />
+            <Box className="w-3 h-3 rounded-full bg-green-500" />
+          </Box>
           <span className="text-zinc-400 text-sm ml-4 font-mono">
             marco@dev: ~
           </span>
-        </div>
+        </Box>
 
-        <div className="p-6 font-code text-sm min-h-[400px]">
+        <Box className="p-6 font-code text-sm min-h-[400px]">
           {lines.map((line, i) => (
-            <div
+            <Box
               key={i}
               className={`mb-2 ${
                 line.isSuccess
@@ -90,12 +89,12 @@ const Terminal: React.FC<TerminalProps> = ({ onFinish }) => {
               }`}
             >
               {line.isCommand ? line.typedText ?? "" : line.text}
-            </div>
+            </Box>
           ))}
-          <div className="mt-2 animate-pulse text-cyan-400">█</div>
-        </div>
-      </div>
-    </div>
+          <Box className="mt-2 animate-pulse text-cyan-400">█</Box>
+        </Box>
+      </Box>
+    </Box>
   );
 };
 

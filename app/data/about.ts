@@ -1,4 +1,5 @@
-import { Sparkles, Rocket, Zap, Activity, CheckCircle2, Clock, GitPullRequest, Terminal } from "lucide-react";
+import { Sparkles, Rocket, Zap, Activity, CheckCircle2, Clock, GitPullRequest, Terminal, Layers } from "lucide-react";
+import { SubtitleKeyword } from "../models/subtitle-interface";
 
 export interface MetricProps {
   name: string;
@@ -17,25 +18,35 @@ export interface StatProps {
 }
 
 export const codeString = `
-const developer = {
+const developer = { // Always learning, always improving
   name: "Marco",
-  role: "Full-Stack Developer",
-  passion: "Building amazing things",
+  role: "Full-Stack Engineer",
+  focus: ["scalability", "clean architecture", 
+    "performance", "user-experience"],
+  passions: ["skiing", "AC Milan", "cycling"],
   location: "🌍 Remote",
-  coffee: true,
-};
+  openToOpportunities: true,  
+  coffee: false,
+} as const;
 `;
 
 export const metrics: MetricProps[] = [
-  { name: "Clean Code", value: 98, color: "cyan", icon: Sparkles, text: "Excellence achieved" },
-  { name: "Deploy Frequency", value: 95, color: "purple", icon: Rocket, text: "Excellence achieved" },
-  { name: "Performance", value: 99, color: "green", icon: Zap, text: "Excellence achieved" },
-  { name: "Bug Rate", value: 5, color: "orange", icon: Activity, text: "Minimal issues" },
+  { name: "Code Quality", value: 95, color: "cyan", icon: Sparkles, text: "Readable, tested, maintainable" },
+  { name: "System Design", value: 90, color: "purple", icon: Layers, text: "Scalable & modular architecture" },
+  { name: "Performance Focus", value: 99, color: "green", icon: Zap, text: "Optimized for speed & efficiency" },
+  { name: "Technical Debt", value: 10, color: "orange", icon: Activity, text: "Actively managed & reduced" },
 ];
 
 export const stats: StatProps[] = [
-  { icon: Terminal, title: 'Lines of Code', value: '500K+', color: 'cyan', description: 'Written across projects' },
-  { icon: GitPullRequest, title: 'Pull Requests', value: '1,200+', color: 'purple', description: 'Merged successfully' },
-  { icon: Clock, title: 'Coding Hours', value: '8,000+', color: 'orange', description: 'In the last year alone' },
-  { icon: CheckCircle2, title: 'Projects', value: '50+', color: 'green', description: 'Delivered on time' },
+  { icon: Terminal, title: 'Production Code', value: '3 years', color: 'cyan', description: 'Working with real-world software' },
+  { icon: GitPullRequest, title: 'Code Pushing', value: '1,000+', color: 'purple', description: 'Across different projects' },
+  { icon: Clock, title: 'Coding Hours', value: '8,000+', color: 'orange', description: 'For working and personal projects' },
+  { icon: CheckCircle2, title: 'Shipped Projects', value: '50+', color: 'green', description: 'From idea to production' },
+]
+
+export const subtitleKeywords: SubtitleKeyword[] = [
+  { prefix: 'Building', colored: 'scalable products.', suffix: '', color: 'text-cyan-400' },
+  { prefix: 'Thinking', colored: 'clean architectures.', suffix: '', color: 'text-purple-400' },
+  { prefix: 'Realizing', colored: 'high-performance web apps.', suffix: '', color: 'text-emerald-400' },
+  { prefix: 'Creating', colored: 'meaningful user experiences.', suffix: '', color: 'text-rose-400' }
 ]

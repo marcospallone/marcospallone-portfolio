@@ -1,10 +1,11 @@
 'use client';
 
-import { skills } from '@/app/data/skills';
+import { skills, subtitleKeywords } from '@/app/data/skills';
 import { Box, Container, Grid } from '@mui/material';
 import { useState } from 'react';
 import Row from '../../atoms/Row/Row';
 import SkillsItem from '../../molecules/SkillsItem/SkillsItem';
+import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const Skills: React.FC = () => {
   const [whichFlipped, setWhichFlipped] = useState<number | null>(null);
@@ -18,9 +19,7 @@ const Skills: React.FC = () => {
               <span className="font-mono text-cyan-400">{'<skills>'}</span>
             </Box>
             <Box className="mt-8">
-              <p className="text-xl text-center text-zinc-300 italic">
-                Technologies and tools I master
-              </p>
+              <SectionSubtitle keywords={subtitleKeywords} delay={3600} />
             </Box>
           </Grid>
         </Row>

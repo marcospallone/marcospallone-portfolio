@@ -40,7 +40,7 @@ const LanguageItem: React.FC<LanguageItemProps> = ({ language, index }) => {
             </div>
             <div className="flex-1">
               <h3 className="text-cyan-400 mb-1">{language.language}</h3>
-              <p className="text-gray-400 text-sm">{language.level}</p>
+              <p className="text-zinc-400 text-sm">{language.level}</p>
             </div>
             <Globe2 className="w-5 h-5 text-purple-400 opacity-50 group-hover:opacity-100 transition-opacity" />
           </div>
