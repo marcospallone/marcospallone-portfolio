@@ -10,9 +10,33 @@ export interface ExperienceProps {
   countryCode: string;
   description: string;
   technologies: string[];
+  url: string;
 }
 
 export const experiences: ExperienceProps[] = [
+  {
+    type: 'work',
+    title: 'Full-Stack Engineer',
+    entity: 'Papers AG',
+    image: '/images/papers.jpeg',
+    period: 'January 2026 - Present',
+    location: 'Zug, Switzerland',
+    countryCode: 'CH',
+    description:
+      'Working across the stack and collaborating directly with customers to deeply understand their needs and translate them into elegant, intuitive, and scalable solutions.',
+    technologies: [
+      'Angular',
+      'NestJS',
+      'PostgreSQL',
+      'AWS',
+      'Kotlin',
+      'Swift',
+      'Python',
+      'Django',
+      'Express'
+    ],
+    url: 'https://www.papers.ch'
+  },
   {
     type: 'work',
     title: 'Full-Stack Developer',
@@ -32,6 +56,7 @@ export const experiences: ExperienceProps[] = [
       'NSQL',
       'GEL scripting',
     ],
+    url: 'https://www.almc.ch'
   },
   {
     type: 'work',
@@ -52,6 +77,7 @@ export const experiences: ExperienceProps[] = [
       'Docker',
       'Agile',
     ],
+    url: 'https://www.alkemy.com'
   },
   {
     type: 'work',
@@ -64,6 +90,7 @@ export const experiences: ExperienceProps[] = [
     description:
       'Development and maintaining of internal intranet and projects, focusing on responsive design and performance optimization. Consulting for different customers, especially for Alkemy.',
     technologies: ['Angular', 'Java', 'Spring Boot', 'MySQL', 'Vue.js'],
+    url: 'https://www.si2001.it'
   },
   {
     type: 'work',
@@ -76,6 +103,7 @@ export const experiences: ExperienceProps[] = [
     description:
       'Curricular Internship for Bachelor degree. Development and engineering of cross-platform mobile application for internal use.',
     technologies: ['C#', '.NET', 'Xamarin'],
+    url: 'https://www.tecnosistemi.abruzzo.it/'
   },
   {
     type: 'work',
@@ -88,6 +116,7 @@ export const experiences: ExperienceProps[] = [
     description:
       'Management of bar and restaurant room in mountain refuge. Work carried out in conjunction with university studies.',
     technologies: ['Customer Focus', 'Payments Management', 'Service Management'],
+    url: 'https://maps.app.goo.gl/ujAkzs8YUqRuDi1i9'
   },
   {
     type: 'education',
@@ -109,6 +138,7 @@ export const experiences: ExperienceProps[] = [
       'Software Metrics',
       'Software Quality',
     ],
+    url: 'https://www.unibz.it'
   },
   {
     type: 'education',
@@ -138,6 +168,7 @@ export const experiences: ExperienceProps[] = [
       'Deep Learning',
       'Object Detection',
     ],
+    url: 'https://www.unibo.it'
   },
 ];
 

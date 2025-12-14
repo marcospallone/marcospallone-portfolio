@@ -13,7 +13,7 @@ interface ExperienceItemProps {
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) => {
   return (
-    <Box>
+    <Box component={'a'} href={experience.url} target='_blank'>
       <motion.div
         key={index}
         initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
