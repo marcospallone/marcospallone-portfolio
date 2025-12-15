@@ -20,12 +20,25 @@ const ContactForm: React.FC = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    toast.success('Message sent successfully!', {
-      description: "I'll get back to you as soon as possible.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
-    setIsSubmitting(false);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error();
+      toast.success('Message sent successfully!', {
+        description: "I'll get back to you as soon as possible.",
+      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch {
+      toast.error('Failed to send message', {
+        description: 'Please try again later.',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -111,7 +124,7 @@ const ContactForm: React.FC = () => {
               <CustomButton
                 type="submit"
                 disabled={isSubmitting}
-                background='bg-emerald-500'
+                background="bg-emerald-500"
                 customClass="
                   w-full
                   hover:bg-emerald-800

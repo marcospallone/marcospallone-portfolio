@@ -4,7 +4,6 @@ import { ReactNode } from "react";
 interface ButtonProps {
   type?: "button" | "submit" | "reset";
   background?: string;
-  color?: string;
   radius?: number;
   children?: any;
   size?: "small" | "medium" | "large";
@@ -18,7 +17,6 @@ interface ButtonProps {
 const CustomButton: React.FC<ButtonProps> = ({
   type,
   background,
-  color,
   radius,
   children,
   size,

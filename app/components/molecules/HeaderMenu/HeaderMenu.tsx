@@ -1,20 +1,30 @@
-import { menuData } from "@/app/data/menu";
-import { Box } from "@mui/material";
-import React from "react";
-import styles from "./HeaderMenu.module.scss";
-import Link from "next/link";
+import { menuData } from '@/app/data/menu';
+import { Box } from '@mui/material';
+import React from 'react';
+import styles from './HeaderMenu.module.scss';
+import Link from 'next/link';
 
 const HeaderMenu: React.FC = () => {
+  const handleScroll = (id: string) => {
+    const element = document.querySelector(id);
+    if (element) {
+      element.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
+  };
+
   return (
     <Box className="flex">
       {menuData.items.map((item, index) => (
-        <Link
+        <span
           key={index}
           className={`${styles.headerMenuItem} px-3 cursor-pointer text-white hover:text-cyan-400 transition font-mono`}
-          href={item.href}
+          onClick={() => handleScroll(item.href)}
         >
           &lt;{item.label} /&gt;
-        </Link>
+        </span>
       ))}
     </Box>
   );

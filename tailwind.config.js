@@ -8,7 +8,7 @@ module.exports = {
   safelist: [
     {
       pattern:
-        /(from|to|text|bg|border)-(cyan|rose|purple|green|orange|emerald|teal|pink)-(50|100|200|300|400|500|600|700|800|900)/,
+        /(from|to|text|bg|border)-(cyan|rose|purple|green|orange|emerald|teal|pink|zinc)-(50|100|200|300|400|500|600|700|800|900)/,
     },
     'text-cyan-400',
     'text-purple-400',

@@ -27,8 +27,7 @@ const developer = { // Always learning, always improving
   location: "🌍 Remote",
   openToOpportunities: true,  
   coffee: false,
-} as const;
-`;
+} as const;`;
 
 export const metrics: MetricProps[] = [
   { name: "Code Quality", value: 95, color: "cyan", icon: Sparkles, text: "Readable, tested, maintainable" },

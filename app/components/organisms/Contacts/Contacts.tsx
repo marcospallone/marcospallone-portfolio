@@ -1,12 +1,13 @@
 'use client';
 
-import { contactInfo, socialLinks } from '@/app/data/contacts';
+import { contactInfo, socialLinks, subtitleKeywords } from '@/app/data/contacts';
 import { Box, Container, Grid } from '@mui/material';
 import { motion } from 'motion/react';
 import Row from '../../atoms/Row/Row';
 import ContactInfoItem from '../../molecules/ContactInfoItem/ContactInfoItem';
 import ContactSocialItem from '../../molecules/ContactSocialItem/ContactSocialItem';
 import ContactForm from '../../molecules/ContactForm/ContactForm';
+import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const Contacts: React.FC = () => {
   return (
@@ -18,9 +19,7 @@ const Contacts: React.FC = () => {
               <span className="font-mono text-cyan-400">{'<contacts>'}</span>
             </Box>
             <Box className="mt-8">
-              <p className="text-xl text-center text-zinc-300 italic">
-                Get in touch for collaborations or just a friendly chat
-              </p>
+              <SectionSubtitle keywords={subtitleKeywords} delay={2600} />
             </Box>
           </Grid>
         </Row>
@@ -33,7 +32,7 @@ const Contacts: React.FC = () => {
               className="space-y-8 w-full"
             >
               <div>
-                <h3 className="text-cyan-400 mb-6">Contact Information</h3>
+                <h3 className="text-cyan-400 mb-6 text-center md:text-left font-bold">Contact Information</h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <ContactInfoItem key={index} item={info} index={index} />
@@ -42,8 +41,8 @@ const Contacts: React.FC = () => {
               </div>
 
               <div className="mt-2">
-                <h3 className="text-purple-400 mb-6">Connect With Me</h3>
-                <div className="flex gap-4">
+                <h3 className="text-purple-400 mb-6 text-center md:text-left font-bold">Connect With Me</h3>
+                <div className="flex gap-4 justify-center md:justify-start">
                   {socialLinks.map((social, index) => (
                     <ContactSocialItem key={index} social={social} index={index} />
                   ))}

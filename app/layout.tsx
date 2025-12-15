@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   description: "Marco Spallone Portfolio",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{

@@ -18,6 +18,7 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ item, index }) => {
         transition={{ duration: 0.4, delay: 0 }}
         whileHover={{ x: 10 }}
         className="flex items-center gap-4 p-4 bg-black/40 backdrop-blur-sm border border-cyan-500/30 rounded-lg hover:border-cyan-500 transition-colors group"
+        target='_blank'
       >
         <div className="p-3 bg-cyan-500/10 rounded-lg group-hover:bg-cyan-500/20 transition-colors">
           <item.icon className="w-5 h-5 text-cyan-400" />

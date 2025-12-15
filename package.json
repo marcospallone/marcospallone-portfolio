@@ -15,11 +15,13 @@
     "lucide-react": "^0.554.0",
     "motion": "^12.23.24",
     "next": "16.0.3",
+    "nodemailer": "^7.0.11",
     "prism-react-renderer": "^2.4.1",
     "react": "19.2.0",
     "react-country-flag": "^3.1.0",
     "react-dom": "19.2.0",
     "react-icons": "^5.5.0",
+    "resend": "^6.6.0",
     "sass": "^1.94.2",
     "simple-icons": "^16.0.0",
     "sonner": "^2.0.3"

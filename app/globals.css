@@ -26,4 +26,16 @@ body {
   .font-code {
     font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
   }
+
+  .border-button {
+    border: 1px solid;
+  }
+
+  .MuiButton-startIcon {
+    margin-left: 0;
+  }
+
+  .title-hero {
+    min-height: 100px;
+  }
 }

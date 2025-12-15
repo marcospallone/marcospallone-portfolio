@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { COLOR_MAP } from "@/app/utils/colors-map";
-import { Box, Typography } from "@mui/material";
+import { COLOR_MAP } from '@/app/utils/colors-map';
+import { Box, Typography } from '@mui/material';
 
 interface ChipProps {
   radius?: number;
@@ -10,18 +10,13 @@ interface ChipProps {
   backgroundColor?: string;
 }
 
-const Chip: React.FC<ChipProps> = ({
-  radius,
-  label,
-  color,
-  backgroundColor,
-}) => {
-  const colorClass = color ? COLOR_MAP[color] : "";
+const Chip: React.FC<ChipProps> = ({ radius, label, color, backgroundColor }) => {
+  const colorClass = color ? COLOR_MAP[color] : '';
 
   return (
     <Box
-      sx={{ borderRadius: radius ? `${radius}px` : "" }}
-      className={`border ${colorClass} ${backgroundColor} px-3 py-2 flex w-fit backdrop-blur-sm`}
+      sx={{ borderRadius: radius ? `${radius}px` : '' }}
+      className={`border ${colorClass} ${backgroundColor} px-3 py-2 flex w-fit backdrop-blur-sm mt-20 md:mt-0 ml-auto md:ml-0 mr-auto md:mr-0`}
     >
       <span className="font-mono">{label}</span>
     </Box>

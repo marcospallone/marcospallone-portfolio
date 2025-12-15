@@ -58,7 +58,7 @@ const About: React.FC = () => {
                   hidden: { opacity: 0, y: 12 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                className="text-zinc-200 text-lg"
+                className="text-zinc-200 text-lg text-center md:text-left"
               >
                 I’m a full-stack developer focused on building scalable, high-quality web
                 applications. I turn complex problems into clean, maintainable solutions
@@ -70,7 +70,7 @@ const About: React.FC = () => {
                   hidden: { opacity: 0, y: 12 },
                   visible: { opacity: 1, y: 0 },
                 }}
-                className="mt-4 text-zinc-200 text-lg"
+                className="mt-4 text-zinc-200 text-lg text-center md:text-left"
               >
                 Working across frontend and backend, I bridge design and engineering to
                 deliver reliable, performant products with long-term impact.
@@ -87,7 +87,7 @@ const About: React.FC = () => {
                   <Box className="flex items-center gap-3 mb-8">
                     <TrendingUp className="w-6 h-6 text-cyan-400" />
                     <h3 className="text-cyan-400">Performance Metrics</h3>
-                    <Box className="ml-auto flex items-center gap-2">
+                    <Box className="ml-auto flex flex-row-reverse md:flex-row md items-center gap-2">
                       <motion.div
                         animate={{ scale: [0.8, 1.2, 0.8] }}
                         transition={{ duration: 2, repeat: Infinity }}

@@ -32,7 +32,7 @@ const SectionSubtitle: React.FC<SectionSubtitleProps> = ({ keywords, delay }) =>
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            className={`${current.color} font-mono font-semibold whitespace-nowrap`}
+            className={`${current.color} font-mono font-semibold`}
           >
             <span className='text-zinc-200'>{current.prefix}</span>
             {' '}
