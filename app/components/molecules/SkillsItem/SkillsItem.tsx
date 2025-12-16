@@ -27,7 +27,7 @@ const SkillsItem: React.FC<SkillItemProps> = ({
       style={{ perspective: '1000px' }}
     >
       <motion.div
-        className="relative w-full h-[400px] cursor-pointer"
+        className="relative w-full h-[400px]"
         onHoverStart={() => setWhichFlipped(index)}
         onHoverEnd={() => setWhichFlipped(null)}
         onClick={() => setWhichFlipped(index)}

@@ -18,7 +18,7 @@ import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const About: React.FC = () => {
   return (
-    <section id="about">
+    <section id="about" className="min-h-screen">
       <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
@@ -51,7 +51,7 @@ const About: React.FC = () => {
               variants={{
                 visible: { transition: { staggerChildren: 0.15 } },
               }}
-              className='flex flex-col justify-center'
+              className="flex flex-col justify-center"
             >
               <motion.p
                 variants={{

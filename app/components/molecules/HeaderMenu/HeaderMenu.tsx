@@ -1,10 +1,12 @@
 import { menuData } from '@/app/data/menu';
+import { useCursor } from '@/app/providers';
 import { Box } from '@mui/material';
 import React from 'react';
 import styles from './HeaderMenu.module.scss';
-import Link from 'next/link';
 
 const HeaderMenu: React.FC = () => {
+  const { setCursorType } = useCursor();
+
   const handleScroll = (id: string) => {
     const element = document.querySelector(id);
     if (element) {
@@ -20,8 +22,10 @@ const HeaderMenu: React.FC = () => {
       {menuData.items.map((item, index) => (
         <span
           key={index}
-          className={`${styles.headerMenuItem} px-3 cursor-pointer text-white hover:text-cyan-400 transition font-mono`}
+          className={`${styles.headerMenuItem} px-3 text-white hover:text-cyan-400 transition font-mono`}
           onClick={() => handleScroll(item.href)}
+          onMouseEnter={() => setCursorType('link')}
+          onMouseLeave={() => setCursorType('default')}
         >
           &lt;{item.label} /&gt;
         </span>

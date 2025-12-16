@@ -11,7 +11,7 @@ import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const Contacts: React.FC = () => {
   return (
-    <section id='contacts'>
+    <section id="contacts" className="min-h-screen">
       <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
@@ -32,7 +32,9 @@ const Contacts: React.FC = () => {
               className="space-y-8 w-full"
             >
               <div>
-                <h3 className="text-cyan-400 mb-6 text-center md:text-left font-bold">Contact Information</h3>
+                <h3 className="text-cyan-400 mb-6 text-center md:text-left font-bold">
+                  Contact Information
+                </h3>
                 <div className="space-y-4">
                   {contactInfo.map((info, index) => (
                     <ContactInfoItem key={index} item={info} index={index} />
@@ -41,7 +43,9 @@ const Contacts: React.FC = () => {
               </div>
 
               <div className="mt-2">
-                <h3 className="text-purple-400 mb-6 text-center md:text-left font-bold">Connect With Me</h3>
+                <h3 className="text-purple-400 mb-6 text-center md:text-left font-bold">
+                  Connect With Me
+                </h3>
                 <div className="flex gap-4 justify-center md:justify-start">
                   {socialLinks.map((social, index) => (
                     <ContactSocialItem key={index} social={social} index={index} />

@@ -16,7 +16,7 @@ const StatItem: React.FC<StatItemProps> = ({ stat, index }) => {
         key={index}
         transition={{ delay: 0.1, type: 'spring' }}
         whileHover={{ scale: 1.05, y: -20 }}
-        className="relative group cursor-pointer"
+        className="relative group"
       >
         <Box
           className={`absolute inset-0 bg-gradient-to-br from-${stat.color}-500/30 to-${stat.color}-600/30 rounded-xl blur-xl opacity-50 group-hover:opacity-100 transition-opacity`}

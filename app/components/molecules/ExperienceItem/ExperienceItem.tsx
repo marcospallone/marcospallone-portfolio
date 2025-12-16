@@ -1,4 +1,5 @@
 import { ExperienceProps } from '@/app/data/experience';
+import { useCursor } from '@/app/providers';
 import { getTechColor } from '@/app/utils/colors-map';
 import { Box } from '@mui/material';
 import { Briefcase, Building2, Calendar, GraduationCap, Navigation2 } from 'lucide-react';
@@ -12,8 +13,16 @@ interface ExperienceItemProps {
 }
 
 const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) => {
+  const { setCursorType } = useCursor();
+  
   return (
-    <Box component={'a'} href={experience.url} target='_blank'>
+    <Box
+      component={'a'}
+      href={experience.url}
+      target="_blank"
+      onMouseEnter={() => setCursorType('link')}
+      onMouseLeave={() => setCursorType('default')}
+    >
       <motion.div
         key={index}
         initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
@@ -32,7 +41,7 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) =>
                 }`}
               />
               <Box
-                className={`relative backdrop-blur-sm cursor-pointer border rounded-lg p-6 transition-colors ${
+                className={`relative backdrop-blur-sm border rounded-lg p-6 transition-colors ${
                   experience.type === 'work'
                     ? 'bg-cyan-950/30 border-cyan-500/30 hover:border-cyan-500'
                     : 'bg-purple-950/30 border-purple-500/30 hover:border-purple-500'

@@ -8,12 +8,12 @@ import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const Experiences: React.FC = () => {
   return (
-    <section id='experiences'>
+    <section id="experiences" className="min-h-screen">
       <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'<experience>'}</span>
+              <span className="font-mono text-cyan-400">{'<experiences>'}</span>
             </Box>
             <Box className="mt-8">
               <SectionSubtitle keywords={subtitleKeywords} delay={3200} />
@@ -31,7 +31,7 @@ const Experiences: React.FC = () => {
         <Row className="mt-8">
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'</experience>'}</span>
+              <span className="font-mono text-cyan-400">{'</experiences>'}</span>
             </Box>
           </Grid>
         </Row>

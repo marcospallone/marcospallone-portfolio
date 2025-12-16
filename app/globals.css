@@ -19,6 +19,21 @@
   }
 }
 
+* {
+  cursor: none;
+}
+
+@media (pointer: fine) {
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  body {
+    scrollbar-width: none;
+  }
+}
+
 body {
   background: transparent !important;
   font-family: var(--font-sans);
@@ -38,4 +53,8 @@ body {
   .title-hero {
     min-height: 100px;
   }
+}
+
+button:hover {
+  cursor: none !important;
 }

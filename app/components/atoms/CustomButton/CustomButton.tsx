@@ -12,6 +12,8 @@ interface ButtonProps {
   endIcon?: ReactNode;
   onClick?: any
   disabled?: boolean;
+  onMouseEnter?: any;
+  onMouseLeave?: any;
 }
 
 const CustomButton: React.FC<ButtonProps> = ({
@@ -24,7 +26,9 @@ const CustomButton: React.FC<ButtonProps> = ({
   startIcon,
   endIcon,
   onClick,
-  disabled
+  disabled,
+  onMouseEnter,
+  onMouseLeave
 }) => {
   return (
     <Button
@@ -36,6 +40,8 @@ const CustomButton: React.FC<ButtonProps> = ({
       onClick={onClick}
       type={type}
       disabled={disabled}
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}
     >
       {children}
     </Button>

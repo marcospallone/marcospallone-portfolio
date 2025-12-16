@@ -38,7 +38,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index }) => {
                 <Box className="flex items-center gap-2">
                   {project.github && (
                     <a
-                      className="flex min-w-auto !px-0 !py-0 text-xs text-zinc-400 hover:text-cyan-400 cursor-pointer"
+                      className="flex min-w-auto !px-0 !py-0 text-xs text-zinc-400 hover:text-cyan-400"
                       onClick={() => window.open(project.github, '_blank')}
                     >
                       <Github className="w-5 h-5 mr-0" />
@@ -46,7 +46,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index }) => {
                   )}
                   {project.url && (
                     <a
-                      className="flex min-w-auto !px-0 !py-0 text-xs text-zinc-400 hover:text-cyan-400 cursor-pointer"
+                      className="flex min-w-auto !px-0 !py-0 text-xs text-zinc-400 hover:text-cyan-400"
                       onClick={() => window.open(project.url, '_blank')}
                     >
                       <ExternalLink className="w-5 h-5 mr-0" />

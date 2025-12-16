@@ -8,7 +8,7 @@ import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
 const Projects: React.FC = () => {
   return (
-    <section id='projects'>
+    <section id="projects" className="min-h-screen">
       <Container className="py-10 md:py-20">
         <Row>
           <Grid size={12}>

@@ -133,7 +133,9 @@ const ContactForm: React.FC = () => {
                   rounded-lg
                   transition-colors duration-300 ease-out
                   border-0
-  "
+                  font-mono
+                  lowercase
+                "
               >
                 {isSubmitting ? (
                   <>
@@ -142,12 +144,12 @@ const ContactForm: React.FC = () => {
                       transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                       className="w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2"
                     />
-                    Sending...
+                    contacting...
                   </>
                 ) : (
                   <>
                     <Send className="w-4 h-4 mr-2" />
-                    Send Message
+                    npm run contact-marco
                   </>
                 )}
               </CustomButton>

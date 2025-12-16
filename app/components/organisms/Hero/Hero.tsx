@@ -1,20 +1,22 @@
 'use client';
 
+import { titles } from '@/app/data/hero';
+import { useCursor } from '@/app/providers';
 import { Box, Container, Grid } from '@mui/material';
 import { ArrowDown, Mail } from 'lucide-react';
-import Chip from '../../atoms/Chip/Chip';
-import CustomButton from '../../atoms/CustomButton/CustomButton';
-import Row from '../../atoms/Row/Row';
-import HeroWorkProcess from '../../molecules/HeroWorkProcess/HeroWorkProcess';
-import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
-import { titles } from '@/app/data/hero';
 import { AnimatePresence, motion } from 'motion/react';
 import { useEffect, useState } from 'react';
+import Chip from '../../atoms/Chip/Chip';
+import CustomButton from '../../atoms/CustomButton/CustomButton';
+import Magnetic from '../../atoms/Magnetic/Magnetic';
+import Row from '../../atoms/Row/Row';
+import HeroWorkProcess from '../../molecules/HeroWorkProcess/HeroWorkProcess';
 
 const Hero: React.FC = () => {
   const keywords = titles;
   const [index, setIndex] = useState(0);
   const current = keywords[index];
+  const { setCursorType } = useCursor();
 
   const handleFirstButtonClick = () => {
     const element = document.querySelector('#skills');
@@ -39,7 +41,7 @@ const Hero: React.FC = () => {
   }, []);
 
   return (
-    <section className="relative flex flex-col items-center justify-center text-center md:text-left overflow-hidden">
+    <section id='hero' className="relative flex flex-col items-center justify-center text-center md:text-left overflow-hidden">
       <Container maxWidth="xl">
         <Row>
           <Grid
@@ -79,24 +81,32 @@ const Hero: React.FC = () => {
               strong focus on clarity, quality and long-term value.
             </p>
             <Box className="flex mt-6">
-              <CustomButton
-                radius={6}
-                children="Explore Skills"
-                background="bg-gradient-to-r from-cyan-500 to-purple-600"
-                customClass="!text-white hover:from-cyan-600 hover:to-purple-700 border-0 group font-mono text-base font-bold"
-                endIcon={
-                  <ArrowDown className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform" />
-                }
-                onClick={handleFirstButtonClick}
-              />
-              <CustomButton
-                radius={6}
-                children="Download CV"
-                background="bg-transparent"
-                customClass="!text-cyan-400 hover:bg-cyan-600 hover:text-white ml-4 font-mono text-base font-bold !border border-cyan-400 hover:border-zinc-100 border-button"
-                startIcon={<Mail className="w-5 h-5 mr-2 ml-0" />}
-                onClick={handleDownloadCV}
-              />
+              <Magnetic>
+                <CustomButton
+                  radius={6}
+                  children="Explore Skills"
+                  background="bg-gradient-to-r from-cyan-500 to-purple-600"
+                  customClass="!text-white hover:from-cyan-600 hover:to-purple-700 border-0 group font-mono text-base font-bold"
+                  endIcon={
+                    <ArrowDown className="w-5 h-5 ml-2 group-hover:translate-y-1 transition-transform" />
+                  }
+                  onClick={handleFirstButtonClick}
+                  onMouseEnter={() => setCursorType('link')}
+                  onMouseLeave={() => setCursorType('default')}
+                />
+              </Magnetic>
+              <Magnetic>
+                <CustomButton
+                  radius={6}
+                  children="Download CV"
+                  background="bg-transparent"
+                  customClass="!text-cyan-400 hover:bg-cyan-600 hover:text-white ml-4 font-mono text-base font-bold !border border-cyan-400 hover:border-zinc-100 border-button"
+                  startIcon={<Mail className="w-5 h-5 mr-2 ml-0" />}
+                  onClick={handleDownloadCV}
+                  onMouseEnter={() => setCursorType('link')}
+                  onMouseLeave={() => setCursorType('default')}
+                />
+              </Magnetic>
             </Box>
             <Box></Box>
           </Grid>
