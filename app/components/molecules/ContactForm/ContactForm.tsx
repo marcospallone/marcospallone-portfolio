@@ -1,12 +1,11 @@
-import { ContactInfoProps } from '@/app/data/contacts';
 import { Box } from '@mui/material';
+import { Send } from 'lucide-react';
 import { motion } from 'motion/react';
 import { useState } from 'react';
 import { toast } from 'sonner';
+import CustomButton from '../../atoms/CustomButton/CustomButton';
 import { Input } from '../../atoms/Input/Input';
 import { Textarea } from '../../atoms/Textarea/Textarea';
-import CustomButton from '../../atoms/CustomButton/CustomButton';
-import { Send } from 'lucide-react';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({

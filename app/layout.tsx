@@ -6,7 +6,8 @@ import Background from './components/atoms/BackgroundGrid/Background';
 import Cursor from './components/atoms/Cursor/Cursor';
 import { CursorProvider } from './providers';
 import Scrollbar from './components/atoms/Scrollbar/Scrollbar';
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from '@vercel/analytics/next';
+import { Toaster } from 'sonner';
 
 const geistSans = Geist({
   variable: '--font-sans',
@@ -48,6 +49,8 @@ export default function RootLayout({
           {children}
 
           <Cursor />
+
+          <Toaster position="top-right" richColors closeButton />
 
           <Analytics />
         </CursorProvider>
