@@ -5,6 +5,7 @@ import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
 import ExperienceItem from '../../molecules/ExperienceItem/ExperienceItem';
 import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
+import { motion } from 'motion/react';
 
 const Experiences: React.FC = () => {
   return (
@@ -21,10 +22,24 @@ const Experiences: React.FC = () => {
           </Grid>
         </Row>
         <Row className="relative mt-8">
-          <Box className="absolute left-1/2 top-0 bottom-12 w-0.5 bg-gradient-to-b from-cyan-500 via-purple-500 to-rose-500" />
+          <motion.div
+            initial={{ scaleY: 0 }}
+            whileInView={{ scaleY: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="origin-top"
+          >
+            <Box className="absolute left-1/2 top-0 bottom-12 w-0.5 bg-gradient-to-b from-cyan-500 via-purple-500 to-rose-500" />
+          </motion.div>
           {experiences.map((experience: ExperienceProps, index: number) => (
             <Grid key={index} size={12}>
-              <ExperienceItem experience={experience} index={index} />
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.4 }}
+              >
+                <ExperienceItem experience={experience} index={index} />
+              </motion.div>
             </Grid>
           ))}
         </Row>

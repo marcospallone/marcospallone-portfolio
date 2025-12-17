@@ -66,7 +66,7 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index }) => {
               <img
                 src={project.media}
                 alt={project.title}
-                className="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500"
+                className={`w-full h-full opacity-80 group-hover:scale-110 transition-transform duration-500 ${project.imageSize === 'contain' ? 'object-contain' : 'object-cover'}`}
               />
               <Box className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent" />
             </Box>

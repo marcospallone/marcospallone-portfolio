@@ -6,6 +6,7 @@ export interface ProjectProps {
   github?: string;
   url?: string;
   media: string;
+  imageSize?: string;
   title: string;
   description: string;
   technologies: string[];
@@ -33,7 +34,7 @@ export const projects: ProjectProps[] = [
     technologies: ['Angular', 'NestJS', 'Bootstrap', 'Git', 'AWS', 'Asana'],
     media: '/images/juriam.jpeg',
     url: 'https://juriam.it/',
-    command: 'yarn start',
+    command: 'ng serve',
   },
   {
     title: 'Università degli Studi di Padova',
@@ -43,6 +44,7 @@ export const projects: ProjectProps[] = [
       'Frontend development for the University of Padua website, focused on scalable design systems, accessibility standards and seamless integration with an enterprise CMS.',
     technologies: ['TypeScript', 'Next.js', 'MUI', 'Drupal', 'Figma', 'Git', 'Jira'],
     media: '/images/unipd.jpg',
+    imageSize: 'contain',
     command: 'pnpm dev',
   },
   {
@@ -53,6 +55,7 @@ export const projects: ProjectProps[] = [
       'Full-stack engineering of two interconnected e-commerce platforms, built with different technologies and strategies to support distinct business models within the same domain.',
     technologies: ['Liquid', 'Shopify', 'GraphQL', 'PrestaShop', 'PHP'],
     media: '/images/termoricambi.png',
+    imageSize: 'contain',
     command: 'shopify app dev',
   },
   {
@@ -63,17 +66,17 @@ export const projects: ProjectProps[] = [
       'Research-driven project exploring computer vision and mobile sensing to detect driving conditions and automatically restrict smartphone usage for improved road safety.',
     technologies: ['Python', 'Keras', 'Tensorflow', 'Object Detection', 'AWS'],
     media: '/images/unibo.png',
-    command: 'npm start',
+    command: 'yarn start',
   },
   {
-    title: 'Link Motors',
-    repo: 'link-motors',
+    title: 'RINA',
+    repo: 'rina',
     role: 'Full-Stack Developer',
     description:
-      'Full-stack development of an internal management platform for administrators and affiliates of a nationwide automotive reseller network.',
-    technologies: ['Angular', 'NestJS', 'Bootstrap', 'Git', 'AWS', 'Asana'],
-    media: '/images/linkmotors.png',
-    command: 'ng serve',
+      'Frontend development of an RINA new website with different components variants and management with Sitecore integration.',
+    technologies: ['Pug', 'JavaScript', 'Bootstrap', 'Sitecore', 'Git', 'Jira'],
+    media: '/images/rina.png',
+    command: 'pnpm build',
   },
 ];
 
