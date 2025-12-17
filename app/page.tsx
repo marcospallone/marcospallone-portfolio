@@ -15,11 +15,6 @@ import { useIsDesktop } from './hooks/useIsDesktop';
 
 export default function Home() {
   const [showTerminal, setShowTerminal] = useState(true);
-  const { scrollY } = useScroll();
-
-  const isDesktop = useIsDesktop();
-  const opacity = useTransform(scrollY, [200, 600], [1, 0]);
-  const y = useTransform(scrollY, [200, 600], [0, -60]);
 
   return (
     <main className="relative">
@@ -40,14 +35,15 @@ export default function Home() {
             <Terminal onFinish={() => setShowTerminal(false)} />
           </motion.div>
         ) : (
-          <motion.section
+          <motion.div
             key="hero"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.6 }}
             className="relative z-10"
-            style={isDesktop ? { opacity, y } : undefined}
-            initial={{ opacity: 1 }}
           >
             <Hero />
-          </motion.section>
+          </motion.div>
         )}
       </AnimatePresence>
       <About />

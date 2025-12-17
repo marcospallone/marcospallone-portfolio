@@ -24,21 +24,30 @@ const SectionSubtitle: React.FC<SectionSubtitleProps> = ({ keywords, delay }) =>
 
   return (
     <p className="text-xl md:text-2xl text-center text-zinc-300">
-      <span className="inline-flex justify-center ml-2">
+      <span
+        className="
+        block
+        mx-auto
+        max-w-[24ch]
+        overflow-hidden
+        text-center
+        leading-snug
+        h-[4.2em]
+        md:h-auto
+        md:max-w-none
+      "
+      >
         <AnimatePresence mode="wait">
           <motion.span
-            key={current.colored}
+            key={`${current.prefix}-${current.colored}-${current.suffix}`}
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4, ease: 'easeOut' }}
-            className={`${current.color} font-mono font-semibold`}
+            className={`${current.color} font-mono font-semibold block line-clamp-2`}
           >
-            <span className='text-zinc-200'>{current.prefix}</span>
-            {' '}
-            {current.colored}
-            {' '}
-            <span className='text-zinc-200'>{current.suffix}</span>
+            <span className="text-zinc-200">{current.prefix}</span> {current.colored}{' '}
+            <span className="text-zinc-200">{current.suffix}</span>
           </motion.span>
         </AnimatePresence>
       </span>

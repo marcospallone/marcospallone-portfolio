@@ -38,11 +38,11 @@ const LanguageItem: React.FC<LanguageItemProps> = ({ language, index }) => {
                 style={{ width: '100%', height: '2em' }}
               />
             </div>
-            <div className="flex-1">
-              <h3 className="text-cyan-400 mb-1">{language.language}</h3>
-              <p className="text-zinc-400 text-sm">{language.level}</p>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-cyan-400 mb-1 truncate">{language.language}</h3>
+              <p className="text-zinc-400 text-sm truncate">{language.level}</p>
             </div>
-            <Globe2 className="w-5 h-5 text-purple-400 opacity-50 group-hover:opacity-100 transition-opacity" />
+            <Globe2 className="w-5 h-5 shrink-0 text-purple-400 opacity-50 group-hover:opacity-100 transition-opacity" />
           </div>
         </div>
       </motion.div>
