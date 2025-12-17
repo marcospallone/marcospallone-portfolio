@@ -87,11 +87,11 @@ const About: React.FC = () => {
                   <Box className="flex items-center gap-3 mb-8">
                     <TrendingUp className="w-6 h-6 text-cyan-400" />
                     <h3 className="text-cyan-400">Performance Metrics</h3>
-                    <Box className="ml-auto flex flex-row-reverse md:flex-row md items-center gap-2">
+                    <Box className="ml-auto flex flex-row-reverse items-center text-right md:flex-row md:text-left gap-2">
                       <motion.div
                         animate={{ scale: [0.8, 1.2, 0.8] }}
                         transition={{ duration: 2, repeat: Infinity }}
-                        className="w-2 h-2 rounded-full bg-green-500"
+                        className="w-2 h-2 rounded-full bg-green-500 shrink-0"
                       />
                       <span className="text-green-400 text-sm font-mono">
                         All Systems Optimal

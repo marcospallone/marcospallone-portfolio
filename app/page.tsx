@@ -11,11 +11,13 @@ import Languages from './components/organisms/Languages/Languages';
 import Projects from './components/organisms/Projects/Projects';
 import Contacts from './components/organisms/Contacts/Contacts';
 import Footer from './components/molecules/Footer/Footer';
+import { useIsDesktop } from './hooks/useIsDesktop';
 
 export default function Home() {
-  const [showTerminal, setShowTerminal] = useState(false);
+  const [showTerminal, setShowTerminal] = useState(true);
   const { scrollY } = useScroll();
 
+  const isDesktop = useIsDesktop();
   const opacity = useTransform(scrollY, [200, 600], [1, 0]);
   const y = useTransform(scrollY, [200, 600], [0, -60]);
 
@@ -41,10 +43,7 @@ export default function Home() {
           <motion.section
             key="hero"
             className="relative z-10"
-            style={{
-              opacity,
-              y,
-            }}
+            style={isDesktop ? { opacity, y } : undefined}
             initial={{ opacity: 1 }}
           >
             <Hero />

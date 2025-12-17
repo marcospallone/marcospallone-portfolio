@@ -64,7 +64,7 @@ const Terminal: React.FC<TerminalProps> = ({ onFinish }) => {
   return (
     <Box className="relative group">
       <Box className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-lg blur-2xl opacity-50 group-hover:opacity-75 transition-opacity" />
-      <Box className="relative bg-black/90 backdrop-blur-xl border border-cyan-500/30 rounded-lg overflow-hidden shadow-2xl w-[700px]">
+      <Box className="relative bg-black/90 backdrop-blur-xl border border-cyan-500/30 rounded-lg overflow-hidden shadow-2xl w-[95vw] max-w-[700px]">
         <Box className="flex items-center gap-2 px-4 py-3 bg-black/60 border-b border-cyan-500/20">
           <Box className="flex gap-2">
             <Box className="w-3 h-3 rounded-full bg-red-500" />

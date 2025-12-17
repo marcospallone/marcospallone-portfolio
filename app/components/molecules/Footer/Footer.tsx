@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
 
   return (
     <>
-    <Box className="p-8 flex justify-center items-center w-full relative bg-black/80 backdrop-blur-sm shadow-lg text-zinc-200">
+    <Box className="p-8 flex flex-col justify-center items-center w-full relative bg-black/80 backdrop-blur-sm shadow-lg text-zinc-200">
         © 2025 Marco Spallone - P.I. 02211760661. All rights reserved.
         <a
           onClick={() => setOpen(true)}
