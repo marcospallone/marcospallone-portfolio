@@ -6,6 +6,7 @@ import Background from './components/atoms/BackgroundGrid/Background';
 import Cursor from './components/atoms/Cursor/Cursor';
 import { CursorProvider } from './providers';
 import Scrollbar from './components/atoms/Scrollbar/Scrollbar';
+import { Analytics } from "@vercel/analytics/next"
 
 const geistSans = Geist({
   variable: '--font-sans',
@@ -47,6 +48,8 @@ export default function RootLayout({
           {children}
 
           <Cursor />
+
+          <Analytics />
         </CursorProvider>
       </body>
     </html>
