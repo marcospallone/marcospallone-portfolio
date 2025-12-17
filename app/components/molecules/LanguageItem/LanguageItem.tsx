@@ -31,11 +31,11 @@ const LanguageItem: React.FC<LanguageItemProps> = ({ language, index }) => {
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-lg blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
         <div className="relative bg-black/60 border border-cyan-500/30 rounded-lg p-6 hover:border-cyan-500 transition-colors">
           <div className="flex items-center gap-4">
-            <div className='border border-purple-500/80 flex rounded-md overflow-hidden w-fit'>
+            <div className='border border-purple-500/80 flex rounded-md overflow-hidden' style={{ width: '42px', height: '32px' }}>
               <ReactCountryFlag
                 countryCode={language.countryCode}
                 svg
-                style={{ width: '100%', height: '2em' }}
+                style={{ width: '100%', height: '100%' }}
               />
             </div>
             <div className="flex-1 min-w-0">

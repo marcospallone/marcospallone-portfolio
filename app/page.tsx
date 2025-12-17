@@ -1,17 +1,16 @@
 'use client';
 
+import { AnimatePresence, motion } from 'motion/react';
 import { useState } from 'react';
-import Hero from './components/organisms/Hero/Hero';
-import Terminal from './components/organisms/Terminal/Terminal';
-import { AnimatePresence, motion, useScroll, useTransform } from 'motion/react';
+import Footer from './components/molecules/Footer/Footer';
 import About from './components/organisms/About/About';
+import Contacts from './components/organisms/Contacts/Contacts';
 import Experiences from './components/organisms/Experiences/Experiences';
-import Skills from './components/organisms/Skills/Skills';
+import Hero from './components/organisms/Hero/Hero';
 import Languages from './components/organisms/Languages/Languages';
 import Projects from './components/organisms/Projects/Projects';
-import Contacts from './components/organisms/Contacts/Contacts';
-import Footer from './components/molecules/Footer/Footer';
-import { useIsDesktop } from './hooks/useIsDesktop';
+import Skills from './components/organisms/Skills/Skills';
+import Terminal from './components/organisms/Terminal/Terminal';
 
 export default function Home() {
   const [showTerminal, setShowTerminal] = useState(true);
