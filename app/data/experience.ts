@@ -56,7 +56,7 @@ export const experiences: ExperienceProps[] = [
       'NSQL',
       'GEL scripting',
     ],
-    url: 'https://www.almc.ch'
+    url: 'https://almc.ch'
   },
   {
     type: 'work',
