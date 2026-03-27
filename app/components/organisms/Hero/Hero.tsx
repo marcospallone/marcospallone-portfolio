@@ -54,25 +54,66 @@ const Hero: React.FC = () => {
               backgroundColor="bg-gradient-to-r from-cyan-500/10 to-purple-500/10"
               label='$ echo "Hello, World!"'
             />
-            <Box className="mt-4 md:mt-8 mb-4 md:mb-0 font-medium text-xl md:text-2xl lg:text-3xl text-zinc-300 font-mono">
-              I'm a
-            </Box>
-            <h1 className="mt-2 md:mt-4 mb-4 font-bold font-mono text-white title-hero flex items-center">
-              <AnimatePresence mode="wait">
-                <motion.span
-                  key={current.colored}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  transition={{ duration: 0.4, ease: 'easeOut' }}
-                  className={`${current.color} font-mono font-semibold md:font-bold text-5xl md:text-4xl lg:text-6xl h-full w-full flex items-center justify-center md:justify-start`}
-                >
-                  <span className="text-zinc-200">{current.prefix}</span>{' '}
-                  {current.colored}{' '}
-                  <span className="text-zinc-200">{current.suffix}</span>
-                </motion.span>
-              </AnimatePresence>
-            </h1>
+            {/* Title area */}
+            <div className="mt-6 md:mt-8 mb-4">
+              {/* "I'm a" label */}
+              <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.2em] mb-4 text-center md:text-left">
+                I'm a
+              </p>
+
+              {/* Fixed-height title slot */}
+              <div
+                className="relative overflow-hidden h-[3rem] md:h-[3.25rem] xl:h-[4rem]"
+              >
+                <AnimatePresence mode="wait">
+                  <motion.h1
+                    key={current.colored}
+                    initial={{ opacity: 0, y: 28 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -28 }}
+                    transition={{ duration: 0.38, ease: [0.25, 0.1, 0.25, 1] }}
+                    className={`${current.color} font-mono font-bold text-3xl md:text-4xl xl:text-5xl leading-none absolute inset-0 flex items-center justify-center md:justify-start whitespace-nowrap`}
+                  >
+                    {current.prefix && (
+                      <span className="text-zinc-200">{current.prefix}&nbsp;</span>
+                    )}
+                    {current.colored}
+                    {current.suffix && (
+                      <span className="text-zinc-200">&nbsp;{current.suffix}</span>
+                    )}
+                    <motion.span
+                      animate={{ opacity: [1, 0] }}
+                      transition={{ duration: 0.65, repeat: Infinity, repeatType: 'reverse', ease: 'linear' }}
+                      className="inline-block ml-1 opacity-60 select-none"
+                    >
+                      |
+                    </motion.span>
+                  </motion.h1>
+                </AnimatePresence>
+              </div>
+
+              {/* Progress dots */}
+              <div className="flex justify-center md:justify-start gap-2 mt-4">
+                {keywords.map((kw, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setIndex(i)}
+                    onMouseEnter={() => setCursorType('link')}
+                    onMouseLeave={() => setCursorType('default')}
+                    className={`rounded-full transition-all duration-300 focus:outline-none ${
+                      i === index ? 'w-5 h-1.5' : 'w-1.5 h-1.5 hover:opacity-60'
+                    }`}
+                    style={{
+                      backgroundColor:
+                        i === index
+                          ? { 'text-cyan-400': '#22d3ee', 'text-purple-400': '#c084fc', 'text-rose-400': '#fb7185', 'text-emerald-400': '#34d399' }[kw.color] ?? '#22d3ee'
+                          : '#52525b',
+                      opacity: i === index ? 1 : 0.4,
+                    }}
+                  />
+                ))}
+              </div>
+            </div>
             <p className="mt-4 mb-4 font-medium text-lg md:text-2xl lg:text-3xl text-zinc-300">
               I help turn ideas into real, working{' '}
               <span className="text-cyan-400 text-bold">software</span>. From

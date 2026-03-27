@@ -23,17 +23,18 @@ export const experiences: ExperienceProps[] = [
     location: 'Zug, Switzerland',
     countryCode: 'CH',
     description:
-      'Working across the stack and collaborating directly with customers to deeply understand their needs and translate them into elegant, intuitive, and scalable solutions.',
+      'Working across the stack and collaborating directly with customers to deeply understand their needs and translate them into elegant, intuitive, and scalable solutions. Focusing mainly on Acurast and Hypergate products.',
     technologies: [
       'Angular',
       'NestJS',
       'PostgreSQL',
-      'AWS',
-      'Kotlin',
-      'Swift',
-      'Python',
-      'Django',
-      'Express'
+      'React',
+      'Blockchain',
+      'Polkadot',
+      'Sentry',
+      'Gitlab',
+      'Git',
+      'Beacon SDK',
     ],
     url: 'https://www.papers.ch'
   },

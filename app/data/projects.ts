@@ -15,14 +15,14 @@ export interface ProjectProps {
 
 export const projects: ProjectProps[] = [
   {
-    title: 'Treccani',
-    repo: 'treccani-frontend',
-    role: 'Frontend Developer',
+    title: 'Acurast',
+    repo: 'acurast-hub',
+    role: 'Full-Stack Engineer',
     description:
-      'Frontend development for the official Treccani website, focusing on performance, accessibility and content-driven architecture using a modern headless CMS approach.',
-    technologies: ['TypeScript', 'Next.js', 'MUI', 'Storyblok', 'Figma', 'Git', 'Jira'],
-    media: '/images/treccani.png',
-    url: 'https://www.treccani.it',
+      'Development and design of Acurast HUB, with a particular focus on Explorer section and blockchain data fetching and manipulating.',
+    technologies: ['Angular', 'React', 'Tailwind CSS', 'Polkadot', 'Sentry', 'Beacon SDK', 'Blockchain', 'Gitlab', 'Git'],
+    media: '/images/acurast.png',
+    url: 'https://www.hub.acurast.com',
     command: 'npm run dev',
   },
   {

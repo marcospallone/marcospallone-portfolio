@@ -17,8 +17,9 @@ const ProjectItem: React.FC<ProjectItemProps> = ({ project, index }) => {
       <motion.div
         key={index}
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.1 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-60px" }}
+        transition={{ duration: 0.5, delay: index * 0.08 }}
         className="relative group"
       >
         <motion.div

@@ -26,8 +26,9 @@ const StatItem: React.FC<StatItemProps> = ({ stat, index }) => {
             <Icon className={`w-8 h-8 text-${stat.color}-400 mb-4`} />
             <motion.div
               initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 1.4 + index * 0.1 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 + index * 0.1 }}
               className={`text-4xl font-bold mb-2 bg-gradient-to-br from-${stat.color}-400 to-${stat.color}-600 bg-clip-text text-transparent`}
             >
               {stat.value}

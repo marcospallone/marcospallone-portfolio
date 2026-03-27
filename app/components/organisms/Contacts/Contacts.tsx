@@ -27,8 +27,9 @@ const Contacts: React.FC = () => {
           <Grid size={{ xs: 12, md: 6 }} className="flex items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
               className="space-y-8 w-full"
             >
               <div>

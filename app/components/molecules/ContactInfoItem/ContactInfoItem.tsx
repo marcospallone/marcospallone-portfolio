@@ -14,8 +14,9 @@ const ContactInfoItem: React.FC<ContactInfoItemProps> = ({ item, index }) => {
         key={index}
         href={item.href}
         initial={{ opacity: 0, x: -20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.4, delay: 0 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4, delay: index * 0.08 }}
         whileHover={{ x: 10 }}
         className="flex items-center gap-4 p-4 bg-black/40 backdrop-blur-sm border border-cyan-500/30 rounded-lg hover:border-cyan-500 transition-colors group"
         target='_blank'

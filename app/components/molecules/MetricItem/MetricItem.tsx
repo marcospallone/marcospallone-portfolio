@@ -17,8 +17,9 @@ const MetricItem: React.FC<MetricItemProps> = ({ metric, index }) => {
     <motion.div
       key={metric.name}
       initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.8 + index * 0.2 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.1 + index * 0.1 }}
       className="space-y-3"
     >
       <Box className="flex items-center justify-between">
@@ -36,10 +37,11 @@ const MetricItem: React.FC<MetricItemProps> = ({ metric, index }) => {
       <Box className="relative h-3 rounded-full overflow-hidden bg-black/60 border border-cyan-500/20">
         <motion.div
           initial={{ width: 0 }}
-          animate={{ width: `${metric.value}%` }}
+          whileInView={{ width: `${metric.value}%` }}
+          viewport={{ once: true }}
           transition={{
-            duration: 1,
-            delay: 0.8 + index * 0.2,
+            duration: 1.2,
+            delay: 0.2 + index * 0.15,
             ease: 'easeOut',
           }}
           className={`h-full relative overflow-hidden rounded-full ${
@@ -67,8 +69,9 @@ const MetricItem: React.FC<MetricItemProps> = ({ metric, index }) => {
 
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ delay: 1.2 + index * 0.1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.4 + index * 0.1 }}
         className={`text-xs text-${metric.color}-400 font-mono flex items-center gap-1`}
       >
         <CheckCircle2 className="w-3 h-3" />

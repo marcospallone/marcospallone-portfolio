@@ -16,8 +16,9 @@ const LanguageItem: React.FC<LanguageItemProps> = ({ language, index }) => {
       <motion.div
         key={index}
         initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: index * 0.1 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.4, delay: index * 0.08 }}
         whileHover={{ scale: 1.05, y: -5 }}
         className="relative group w-full overflow-hidden"
       >

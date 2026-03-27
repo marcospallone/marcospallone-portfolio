@@ -9,14 +9,14 @@ const HeroWorkProcess: React.FC = () => {
       initial="hidden"
       animate="visible"
       variants={{
-        visible: { transition: { staggerChildren: 0.15 } },
+        visible: { transition: { staggerChildren: 0.18 } },
       }}
       className="relative flex flex-col items-center"
     >
-
-      <div className="space-y-8 w-full">
+      <div className="space-y-0 w-full">
         {heroSteps.map((step, index) => {
           const Icon = step.icon;
+          const isLast = index === heroSteps.length - 1;
 
           return (
             <motion.div
@@ -25,20 +25,27 @@ const HeroWorkProcess: React.FC = () => {
                 hidden: { opacity: 0, y: 20 },
                 visible: { opacity: 1, y: 0 },
               }}
-              className="relative flex flex-col items-center text-center group"
+              className="relative flex items-start gap-5 group"
             >
-              <div className="relative z-10 flex items-center justify-center w-12 h-12 rounded-full bg-black border border-cyan-500/40 group-hover:border-cyan-400 transition-colors">
-                <Icon className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+              {/* Left column: icon + connector */}
+              <div className="flex flex-col items-center shrink-0">
+                <div className="relative z-10 flex items-center justify-center w-11 h-11 rounded-full bg-[#050508] border border-cyan-500/40 group-hover:border-cyan-400 group-hover:shadow-[0_0_12px_rgba(6,182,212,0.25)] transition-all duration-300">
+                  <Icon className="w-5 h-5 text-cyan-400 group-hover:text-cyan-300 transition-colors" />
+                </div>
+                {!isLast && (
+                  <div className="w-px h-8 bg-gradient-to-b from-cyan-500/40 to-transparent mt-1" />
+                )}
               </div>
 
-              <div className="mt-3">
-                <span className="block text-sm font-mono text-zinc-500 mb-1">
+              {/* Right column: content */}
+              <div className={`flex flex-col text-left ${isLast ? 'pb-0' : 'pb-8'}`}>
+                <span className="block text-xs font-mono text-zinc-600 mb-0.5">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <h2 className="text-zinc-200 font-bold text-lg uppercase font-mono">
+                <h2 className="text-zinc-200 font-semibold text-base uppercase font-mono leading-tight">
                   {step.title}
                 </h2>
-                <p className="text-base text-zinc-400 font-mono mt-1">
+                <p className="text-sm text-zinc-500 font-mono mt-1 leading-relaxed">
                   {step.description}
                 </p>
               </div>

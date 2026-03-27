@@ -26,8 +26,9 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) =>
       <motion.div
         key={index}
         initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.6, delay: index * 0.2 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
         className="relative mb-12 md:pl-1/2 md:ml-auto md:text-left"
       >
         <Box className="flex items-center gap-4">
@@ -113,8 +114,9 @@ const ExperienceItem: React.FC<ExperienceItemProps> = ({ experience, index }) =>
         {/* Timeline dot */}
         <motion.div
           initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.3, delay: index * 0.2 + 0.3 }}
+          whileInView={{ scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.3, delay: 0.2 }}
           className={`absolute left-1/2 top-3 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-[#0a0a0f] ${
             experience.type === 'work'
               ? 'bg-gradient-to-r from-cyan-500 to-blue-500'

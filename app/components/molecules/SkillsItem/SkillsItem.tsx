@@ -21,8 +21,9 @@ const SkillsItem: React.FC<SkillItemProps> = ({
     <motion.div
       key={category.id}
       initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-60px" }}
+      transition={{ duration: 0.5, delay: index * 0.1 }}
       className="perspective-1000"
       style={{ perspective: '1000px' }}
     >

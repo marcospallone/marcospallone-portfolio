@@ -10,13 +10,19 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --glow-cyan: rgba(6, 182, 212, 0.15);
+  --glow-purple: rgba(168, 85, 247, 0.15);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #050508;
     --foreground: #ededed;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 * {
@@ -37,9 +43,12 @@
 body {
   background: transparent !important;
   font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 
   .font-code {
-    font-family: Consolas, Menlo, Monaco, "Courier New", monospace;
+    font-family: var(--font-mono), Consolas, Menlo, Monaco, "Courier New", monospace;
   }
 
   .border-button {
@@ -50,11 +59,26 @@ body {
     margin-left: 0;
   }
 
-  .title-hero {
-    min-height: 100px;
-  }
 }
 
 button:hover {
   cursor: none !important;
+}
+
+/* Text selection */
+::selection {
+  background: rgba(6, 182, 212, 0.25);
+  color: #fff;
+}
+
+::-moz-selection {
+  background: rgba(6, 182, 212, 0.25);
+  color: #fff;
+}
+
+/* Accessible focus */
+:focus-visible {
+  outline: 2px solid rgba(6, 182, 212, 0.6);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
