@@ -22,7 +22,7 @@ export const projects: ProjectProps[] = [
       'Development and design of Acurast HUB, with a particular focus on Explorer section and blockchain data fetching and manipulating.',
     technologies: ['Angular', 'React', 'Tailwind CSS', 'Polkadot', 'Sentry', 'Beacon SDK', 'Blockchain', 'Gitlab', 'Git'],
     media: '/images/acurast.png',
-    url: 'https://www.hub.acurast.com',
+    url: 'https://hub.acurast.com',
     command: 'npm run dev',
   },
   {
