@@ -24,7 +24,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Marco Spallone | Full Stack Developer',
+  title: 'Marco Spallone | Software Engineer | Full Stack Developer',
   description:
     'Software Engineer & Full Stack Developer building scalable, high-quality web applications. Based in Italy.',
 };
