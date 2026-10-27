@@ -1,11 +1,9 @@
 import type { Metadata } from 'next';
 import { Outfit, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
-import Header from './components/molecules/Header/Header';
 import Background from './components/atoms/BackgroundGrid/Background';
 import Cursor from './components/atoms/Cursor/Cursor';
 import { CursorProvider } from './providers';
-import Scrollbar from './components/atoms/Scrollbar/Scrollbar';
 import { Analytics } from '@vercel/analytics/next';
 import { Toaster } from 'sonner';
 
@@ -43,13 +41,7 @@ export default function RootLayout({
     <html lang="en" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
       <body className="antialiased">
         <CursorProvider>
-          <Scrollbar />
-
           <Background />
-
-          <header className="fixed z-20 w-full">
-            <Header />
-          </header>
 
           {children}
 

@@ -38,7 +38,7 @@ const Hero: React.FC = () => {
     }, 2800);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [keywords.length]);
 
   return (
     <section id='hero' className="relative flex flex-col items-center justify-center text-center md:text-left overflow-hidden">
@@ -57,8 +57,8 @@ const Hero: React.FC = () => {
             {/* Title area */}
             <div className="mt-6 md:mt-8 mb-4">
               {/* "I'm a" label */}
-              <p className="font-mono text-zinc-500 text-xs uppercase tracking-[0.2em] mb-4 text-center md:text-left">
-                I'm a
+              <p className="font-mono font-medium text-zinc-300 text-xs uppercase tracking-[0.24em] mb-4 text-center md:text-left">
+                I&apos;m a
               </p>
 
               {/* Fixed-height title slot */}
@@ -125,7 +125,6 @@ const Hero: React.FC = () => {
               <Magnetic>
                 <CustomButton
                   radius={6}
-                  children="Explore Skills"
                   background="bg-gradient-to-r from-cyan-500 to-purple-600"
                   customClass="!text-white hover:from-cyan-600 hover:to-purple-700 border-0 group font-mono text-base font-bold"
                   endIcon={
@@ -134,19 +133,22 @@ const Hero: React.FC = () => {
                   onClick={handleFirstButtonClick}
                   onMouseEnter={() => setCursorType('link')}
                   onMouseLeave={() => setCursorType('default')}
-                />
+                >
+                  Explore Skills
+                </CustomButton>
               </Magnetic>
               <Magnetic>
                 <CustomButton
                   radius={6}
-                  children="Download CV"
                   background="bg-transparent"
                   customClass="!text-cyan-400 hover:bg-cyan-600 hover:text-white ml-4 font-mono text-base font-bold !border border-cyan-400 hover:border-zinc-100 border-button"
                   startIcon={<Mail className="w-5 h-5 mr-2 ml-0" />}
                   onClick={handleDownloadCV}
                   onMouseEnter={() => setCursorType('link')}
                   onMouseLeave={() => setCursorType('default')}
-                />
+                >
+                  Download CV
+                </CustomButton>
               </Magnetic>
             </Box>
             <Box></Box>

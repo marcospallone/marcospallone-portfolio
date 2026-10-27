@@ -33,7 +33,7 @@ export const contactInfo: ContactInfoProps[] = [
     icon: MapPin,
     label: 'Location',
     value: 'Scanno, Italy',
-    href: 'google.it/maps/place/67038+Scanno+AQ/@41.911253,13.8796023,15z/data=!4m6!3m5!1s0x1330131cd3165e5b:0x6e06919f6eeb65!8m2!3d41.9028393!4d13.8796078!16zL20vMGRxNmww?hl=it&entry=ttu&g_ep=EgoyMDI1MTIwOS4wIKXMDSoKLDEwMDc5MjA2N0gBUAM%3D',
+    href: 'https://www.google.com/maps/search/?api=1&query=Marco%20Spallone%20Software%20Engineering%2C%20Scanno%2C%20Italy',
   },
 ];
 

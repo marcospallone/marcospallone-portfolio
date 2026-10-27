@@ -22,8 +22,8 @@ const Terminal: React.FC<TerminalProps> = ({ onFinish }) => {
 
   useEffect(() => {
     if (index >= terminalCommands.length) {
-      setTimeout(() => onFinish(), 500);
-      return;
+      const finishTimer = setTimeout(onFinish, 500);
+      return () => clearTimeout(finishTimer);
     }
     const line = terminalCommands[index];
     const timer = setTimeout(() => {

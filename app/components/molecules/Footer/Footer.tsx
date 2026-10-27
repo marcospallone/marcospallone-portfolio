@@ -39,11 +39,11 @@ const Footer: React.FC = () => {
               {/* Brand */}
               <div>
                 <Logo />
-                <p className="mt-4 text-zinc-500 text-sm font-mono leading-relaxed">
+                <p className="mt-4 text-zinc-400 text-sm font-mono leading-relaxed">
                   Building scalable web applications<br />
                   with passion and precision.
                 </p>
-                <p className="mt-3 text-zinc-600 text-xs font-mono">
+                <p className="mt-3 text-zinc-500 text-xs font-mono">
                   Based in Scanno, Italy
                 </p>
               </div>
@@ -58,7 +58,7 @@ const Footer: React.FC = () => {
                     <button
                       key={item.label}
                       onClick={() => handleScroll(item.href)}
-                      className="text-left text-zinc-500 hover:text-cyan-400 text-sm font-mono transition-colors duration-200 w-fit"
+                      className="text-left text-zinc-400 hover:text-cyan-300 text-sm font-mono transition-colors duration-200 w-fit"
                     >
                       {'<'}{item.label}
                       {' />'}
@@ -82,7 +82,7 @@ const Footer: React.FC = () => {
                         href={social.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-zinc-500 hover:text-cyan-400 transition-colors duration-200 w-fit group"
+                        className="flex items-center gap-3 text-zinc-400 hover:text-cyan-300 transition-colors duration-200 w-fit group"
                       >
                         <Icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
                         <span className="text-sm font-mono">{social.label}</span>
@@ -97,13 +97,13 @@ const Footer: React.FC = () => {
             <div className="h-px bg-gradient-to-r from-transparent via-zinc-800 to-transparent mb-6" />
 
             {/* Copyright row */}
-            <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-zinc-600 text-xs font-mono">
+            <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-zinc-500 text-xs font-mono">
               <span>
                 © 2025 Marco Spallone &nbsp;·&nbsp; P.I. 02211760661
               </span>
               <button
                 onClick={() => setOpen(true)}
-                className="hover:text-zinc-400 underline transition-colors duration-200"
+                className="hover:text-zinc-300 underline transition-colors duration-200"
               >
                 Privacy Policy
               </button>
