@@ -3,6 +3,7 @@
 import { languages, subtitleKeywords } from '@/app/data/languages';
 import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
+import SectionTag from '../../atoms/SectionTag/SectionTag';
 import LanguageItem from '../../molecules/LanguageItem/LanguageItem';
 import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
@@ -13,7 +14,7 @@ const Languages: React.FC = () => {
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'<languages>'}</span>
+              <SectionTag name="languages" />
             </Box>
             <Box className="mt-8">
               <SectionSubtitle keywords={subtitleKeywords} delay={3200} />
@@ -30,7 +31,7 @@ const Languages: React.FC = () => {
         <Row className="mt-8">
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'</languages>'}</span>
+              <SectionTag name="languages" closing />
             </Box>
           </Grid>
         </Row>

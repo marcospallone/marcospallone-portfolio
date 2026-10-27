@@ -23,7 +23,7 @@ const CodeSnippet: React.FC = () => {
               style={style}
             >
               {tokens.map((line, i) => (
-                <div key={i} {...getLineProps({ line, key: i })}>
+                <div key={i} {...getLineProps({ line })}>
                   {line.map((token, key) => (
                     <span key={key} {...getTokenProps({ token })} />
                   ))}

@@ -3,6 +3,7 @@
 import { projects, subtitleKeywords } from '@/app/data/projects';
 import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
+import SectionTag from '../../atoms/SectionTag/SectionTag';
 import ProjectItem from '../../molecules/ProjectItem/ProjectItem';
 import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
@@ -13,7 +14,7 @@ const Projects: React.FC = () => {
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'<projects>'}</span>
+              <SectionTag name="projects" />
             </Box>
             <Box className="mt-8">
               <SectionSubtitle keywords={subtitleKeywords} delay={2800} />
@@ -30,7 +31,7 @@ const Projects: React.FC = () => {
         <Row className="mt-8">
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'</projects>'}</span>
+              <SectionTag name="projects" closing />
             </Box>
           </Grid>
         </Row>

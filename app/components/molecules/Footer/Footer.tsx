@@ -2,7 +2,7 @@
 
 import { socialLinks } from '@/app/data/contacts';
 import { menuData } from '@/app/data/menu';
-import { Box } from '@mui/material';
+import { Box, Container } from '@mui/material';
 import { Github, Instagram, Linkedin } from 'lucide-react';
 import React, { useState } from 'react';
 import Logo from '../../atoms/Logo/Logo';
@@ -30,11 +30,11 @@ const Footer: React.FC = () => {
         {/* Top gradient divider */}
         <div className="h-px bg-gradient-to-r from-transparent via-cyan-500/40 to-transparent" />
 
-        <Box className="bg-black/80 backdrop-blur-sm px-8 md:px-12 pt-12 pb-6">
-          <div className="max-w-7xl mx-auto">
+        <Box className="bg-black/80 backdrop-blur-sm pt-12 pb-6">
+          <Container>
 
             {/* Main grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-10">
+            <div className="flex flex-col md:flex-row md:justify-between gap-10 mb-10">
 
               {/* Brand */}
               <div>
@@ -108,7 +108,7 @@ const Footer: React.FC = () => {
                 Privacy Policy
               </button>
             </div>
-          </div>
+          </Container>
         </Box>
       </Box>
 

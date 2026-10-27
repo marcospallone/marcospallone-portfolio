@@ -11,6 +11,7 @@ import { Box, Container, Grid } from '@mui/material';
 import { TrendingUp } from 'lucide-react';
 import { motion } from 'motion/react';
 import Row from '../../atoms/Row/Row';
+import SectionTag from '../../atoms/SectionTag/SectionTag';
 import CodeSnippet from '../../molecules/CodeSnippet/CodeSnippet';
 import MetricItem from '../../molecules/MetricItem/MetricItem';
 import StatItem from '../../molecules/StatItem/StatItem';
@@ -23,7 +24,7 @@ const About: React.FC = () => {
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'<about>'}</span>
+              <SectionTag name="about" />
             </Box>
             <Box className="mt-8">
               <SectionSubtitle keywords={subtitleKeywords} delay={2800} />
@@ -122,7 +123,7 @@ const About: React.FC = () => {
         <Row className="mt-8">
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'</about>'}</span>
+              <SectionTag name="about" closing />
             </Box>
           </Grid>
         </Row>

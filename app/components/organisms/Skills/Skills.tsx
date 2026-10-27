@@ -4,6 +4,7 @@ import { skills, subtitleKeywords } from '@/app/data/skills';
 import { Box, Container, Grid } from '@mui/material';
 import { useState } from 'react';
 import Row from '../../atoms/Row/Row';
+import SectionTag from '../../atoms/SectionTag/SectionTag';
 import SkillsItem from '../../molecules/SkillsItem/SkillsItem';
 import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 
@@ -16,7 +17,7 @@ const Skills: React.FC = () => {
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'<skills>'}</span>
+              <SectionTag name="skills" />
             </Box>
             <Box className="mt-8">
               <SectionSubtitle keywords={subtitleKeywords} delay={3600} />
@@ -39,7 +40,7 @@ const Skills: React.FC = () => {
         <Row className="mt-8">
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'</skills>'}</span>
+              <SectionTag name="skills" closing />
             </Box>
           </Grid>
         </Row>

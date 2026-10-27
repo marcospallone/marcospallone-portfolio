@@ -4,6 +4,7 @@ import { contactInfo, socialLinks, subtitleKeywords } from '@/app/data/contacts'
 import { Box, Container, Grid } from '@mui/material';
 import { motion } from 'motion/react';
 import Row from '../../atoms/Row/Row';
+import SectionTag from '../../atoms/SectionTag/SectionTag';
 import ContactInfoItem from '../../molecules/ContactInfoItem/ContactInfoItem';
 import ContactSocialItem from '../../molecules/ContactSocialItem/ContactSocialItem';
 import ContactForm from '../../molecules/ContactForm/ContactForm';
@@ -16,7 +17,7 @@ const Contacts: React.FC = () => {
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'<contacts>'}</span>
+              <SectionTag name="contacts" />
             </Box>
             <Box className="mt-8">
               <SectionSubtitle keywords={subtitleKeywords} delay={2600} />
@@ -62,7 +63,7 @@ const Contacts: React.FC = () => {
         <Row className="mt-8">
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'</contacts>'}</span>
+              <SectionTag name="contacts" closing />
             </Box>
           </Grid>
         </Row>

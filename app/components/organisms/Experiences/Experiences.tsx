@@ -3,6 +3,7 @@
 import { ExperienceProps, experiences, subtitleKeywords } from '@/app/data/experience';
 import { Box, Container, Grid } from '@mui/material';
 import Row from '../../atoms/Row/Row';
+import SectionTag from '../../atoms/SectionTag/SectionTag';
 import ExperienceItem from '../../molecules/ExperienceItem/ExperienceItem';
 import SectionSubtitle from '../../molecules/SectionSubtitle/SectionSubtitle';
 import { motion } from 'motion/react';
@@ -14,7 +15,7 @@ const Experiences: React.FC = () => {
         <Row>
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'<experiences>'}</span>
+              <SectionTag name="experiences" />
             </Box>
             <Box className="mt-8">
               <SectionSubtitle keywords={subtitleKeywords} delay={3200} />
@@ -46,7 +47,7 @@ const Experiences: React.FC = () => {
         <Row className="mt-8">
           <Grid size={12}>
             <Box className="flex justify-center">
-              <span className="font-mono text-cyan-400">{'</experiences>'}</span>
+              <SectionTag name="experiences" closing />
             </Box>
           </Grid>
         </Row>

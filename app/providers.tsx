@@ -1,5 +1,6 @@
 "use client";
 
+import { MotionConfig } from "motion/react";
 import React, { createContext, useContext, useState } from "react";
 
 type CursorType = "default" | "link" | "button";
@@ -16,7 +17,7 @@ export function CursorProvider({ children }: { children: React.ReactNode }) {
 
   return (
     <CursorContext.Provider value={{ cursorType, setCursorType }}>
-      {children}
+      <MotionConfig reducedMotion="user">{children}</MotionConfig>
     </CursorContext.Provider>
   );
 }

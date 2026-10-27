@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Outfit, JetBrains_Mono } from 'next/font/google';
+import { Outfit, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Background from './components/atoms/BackgroundGrid/Background';
 import Cursor from './components/atoms/Cursor/Cursor';
@@ -14,10 +14,9 @@ const outfit = Outfit({
   display: 'swap',
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const geistMono = Geist_Mono({
   variable: '--font-mono',
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -38,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${outfit.variable} ${jetbrainsMono.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${geistMono.variable}`}>
       <body className="antialiased">
         <CursorProvider>
           <Background />
